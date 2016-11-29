@@ -252,6 +252,7 @@
 		B5B7E1221DC20C2A009B3DCC /* WorkManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B7E1201DC20C2A009B3DCC /* WorkManageViewController.xib */; };
 		B5B7E12A1DC21D6C009B3DCC /* CustomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */; };
 		B5B7E12D1DC21D8A009B3DCC /* ItemVIewsHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E12C1DC21D8A009B3DCC /* ItemVIewsHeight.m */; };
+		B5EF4E0D1DEDA80C005A6668 /* FMAudioPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EF4E0C1DEDA80C005A6668 /* FMAudioPlay.m */; };
 		FE87941C143D94EACFD5CA49 /* libPods-DxTeacher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBFE7291830085298A4A041 /* libPods-DxTeacher.a */; };
 /* End PBXBuildFile section */
 
@@ -689,6 +690,8 @@
 		B5B7E1291DC21D6C009B3DCC /* CustomImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImageView.m; sourceTree = "<group>"; };
 		B5B7E12B1DC21D8A009B3DCC /* ItemVIewsHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemVIewsHeight.h; sourceTree = "<group>"; };
 		B5B7E12C1DC21D8A009B3DCC /* ItemVIewsHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemVIewsHeight.m; sourceTree = "<group>"; };
+		B5EF4E0B1DEDA80C005A6668 /* FMAudioPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMAudioPlay.h; sourceTree = "<group>"; };
+		B5EF4E0C1DEDA80C005A6668 /* FMAudioPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMAudioPlay.m; sourceTree = "<group>"; };
 		C1B52100B7A93BB50D65C65F /* Pods-DxTeacher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DxTeacher.release.xcconfig"; path = "Pods/Target Support Files/Pods-DxTeacher/Pods-DxTeacher.release.xcconfig"; sourceTree = "<group>"; };
 		DEBFE7291830085298A4A041 /* libPods-DxTeacher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DxTeacher.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -839,6 +842,8 @@
 				9F2C2B0E1DE1CC0200DC2D6D /* XBAddWeekRecordModel.m */,
 				9FE4206C1DE41F0F00D7F729 /* XBLeaveModel.h */,
 				9FE4206D1DE41F0F00D7F729 /* XBLeaveModel.m */,
+				B5EF4E0B1DEDA80C005A6668 /* FMAudioPlay.h */,
+				B5EF4E0C1DEDA80C005A6668 /* FMAudioPlay.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1715,6 +1720,7 @@
 				929FD7BE1DC73D2400C68589 /* CommentView.m in Sources */,
 				B5153A761DBE295700D839BA /* UIImage+GIF.m in Sources */,
 				B5153A7C1DBE295700D839BA /* UIView+WebCacheOperation.m in Sources */,
+				B5EF4E0D1DEDA80C005A6668 /* FMAudioPlay.m in Sources */,
 				9F2C2AD51DE17D7000DC2D6D /* XBActionRecordMonthModel.m in Sources */,
 				B5153A891DBE295700D839BA /* ZLPhotoPickerBrowserPhotoScrollView.m in Sources */,
 				B5153A6F1DBE295700D839BA /* SDWebImageDecoder.m in Sources */,
