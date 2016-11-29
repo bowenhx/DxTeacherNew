@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WorkManageViewController">
+            <connections>
+                <outlet property="_segmentedControl" destination="VQo-hv-dkf" id="cBp-Rh-Wgs"/>
+                <outlet property="_tableView" destination="yl9-b7-G8M" id="056-Ky-efn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VQo-hv-dkf">
+                    <segments>
+                        <segment title="出勤"/>
+                        <segment title="统计"/>
+                        <segment title="请假"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentClick:" destination="-1" eventType="valueChanged" id="aYh-OU-mW2"/>
+                    </connections>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yl9-b7-G8M">
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yl9-b7-G8M" firstAttribute="top" secondItem="VQo-hv-dkf" secondAttribute="bottom" constant="15" id="5Oj-V4-giN"/>
+                <constraint firstItem="VQo-hv-dkf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="9hm-em-8nM"/>
+                <constraint firstAttribute="trailing" secondItem="VQo-hv-dkf" secondAttribute="trailing" constant="62" id="BPu-l0-Qlo"/>
+                <constraint firstItem="yl9-b7-G8M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hhr-ly-ahC"/>
+                <constraint firstAttribute="trailing" secondItem="yl9-b7-G8M" secondAttribute="trailing" id="KDk-Us-YbM"/>
+                <constraint firstItem="VQo-hv-dkf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="62" id="cl7-v2-Zpf"/>
+                <constraint firstAttribute="bottom" secondItem="yl9-b7-G8M" secondAttribute="bottom" id="fzY-eK-4y6"/>
+            </constraints>
+            <point key="canvasLocation" x="47" y="207"/>
+        </view>
+    </objects>
+</document>

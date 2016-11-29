@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XBActionRecordTextCell" rowHeight="189" id="O81-GT-L7U" customClass="XBActionRecordTextCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O81-GT-L7U" id="z47-yT-c69">
+                <frame key="frameInset" width="375" height="199"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016年7月 第一周" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyb-WZ-UiZ">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="t6k-in-KrW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipL-YW-Ctz">
+                        <mutableString key="text">这道题我无论怎么算也算不出来,这下我饿信像是被封锁在了北极的大冰山里一样,我想放弃了:这些题是尖子生才有可能做出来的,而我,却从来没当过尖子生,我怎么有可能做出这道题呢.想着想着,心里还真难受,我竟趴在桌子上哭了起来.突然,我想起了爸爸对我说的结. 一道亮光划过心头,"对,男儿有泪不轻弹,不可以在困难面前倒下."想到这儿,我立刻擦干眼泪,重拾信心,准备与"敌人"血拼了. 我拿出学习电脑查相关题型,仔细听了讲解后,才知道,原来这道题要用分数除法.经过我不断地对比,计算,我终于把这道题解开了.我不禁为自己战胜困难欢呼了起来.</mutableString>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ipL-YW-Ctz" firstAttribute="leading" secondItem="z47-yT-c69" secondAttribute="leading" constant="8" id="031-DP-10d"/>
+                    <constraint firstAttribute="bottom" secondItem="ipL-YW-Ctz" secondAttribute="bottom" constant="8" id="Tog-r4-DxC"/>
+                    <constraint firstAttribute="trailing" secondItem="ipL-YW-Ctz" secondAttribute="trailing" constant="8" id="VUp-Lt-kze"/>
+                    <constraint firstItem="dyb-WZ-UiZ" firstAttribute="top" secondItem="z47-yT-c69" secondAttribute="top" constant="8" id="iNX-Jl-Wc4"/>
+                    <constraint firstItem="ipL-YW-Ctz" firstAttribute="top" secondItem="dyb-WZ-UiZ" secondAttribute="bottom" constant="8" id="l5D-5r-iHX"/>
+                    <constraint firstItem="dyb-WZ-UiZ" firstAttribute="leading" secondItem="z47-yT-c69" secondAttribute="leading" constant="8" id="x1f-G6-TpL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="dyb-WZ-UiZ" id="91g-8c-QCE"/>
+            </connections>
+            <point key="canvasLocation" x="1.5" y="0.5"/>
+        </tableViewCell>
+    </objects>
+</document>

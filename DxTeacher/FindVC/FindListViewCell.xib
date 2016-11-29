@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FindListViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的关注" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OJ-Tg-GeQ">
+                    <rect key="frame" x="7" y="8" width="62" height="20"/>
+                    <color key="backgroundColor" red="0.85098039219999999" green="0.0" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="qH0-wC-Tj3"/>
+                        <constraint firstAttribute="height" constant="20" id="usJ-gB-Y4k"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vi_vi" translatesAutoresizingMaskIntoConstraints="NO" id="pZW-vL-J9p">
+                    <rect key="frame" x="4" y="36" width="25" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="3Fs-1G-nwF"/>
+                        <constraint firstAttribute="width" constant="25" id="6rW-ce-CQJ"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTd-v5-qij">
+                    <rect key="frame" x="242" y="8" width="70" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="kbG-02-BOF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="添加关注" image="vi_tjgz">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <state key="selected" image="vi_tjgz_1"/>
+                    <connections>
+                        <action selector="addAttentionButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="0LJ-Z4-74C"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Au-5w-30m">
+                    <rect key="frame" x="282" y="32.5" width="30" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="更多">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="moreButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="fnr-IS-KnB"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="奇智奇才-社会（小班）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJd-qy-62o">
+                    <rect key="frame" x="37" y="35.5" width="150" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="uqg-gm-UIT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gTd-v5-qij" secondAttribute="trailing" constant="8" id="0GR-Hq-TkS"/>
+                <constraint firstItem="9OJ-Tg-GeQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="7" id="0YF-lv-6oR"/>
+                <constraint firstItem="pZW-vL-J9p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="7nT-vK-raV"/>
+                <constraint firstAttribute="trailing" secondItem="1Au-5w-30m" secondAttribute="trailing" constant="8" id="DBf-rE-cGD"/>
+                <constraint firstItem="nJd-qy-62o" firstAttribute="leading" secondItem="pZW-vL-J9p" secondAttribute="trailing" constant="8" id="FJJ-XM-MOo"/>
+                <constraint firstItem="9OJ-Tg-GeQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="IKr-7Z-i2x"/>
+                <constraint firstItem="nJd-qy-62o" firstAttribute="centerY" secondItem="pZW-vL-J9p" secondAttribute="centerY" id="XcJ-F9-jI4"/>
+                <constraint firstItem="1Au-5w-30m" firstAttribute="centerY" secondItem="nJd-qy-62o" secondAttribute="centerY" id="hlC-Jd-z8n"/>
+                <constraint firstItem="pZW-vL-J9p" firstAttribute="top" secondItem="9OJ-Tg-GeQ" secondAttribute="bottom" constant="8" id="rTl-db-xFy"/>
+                <constraint firstItem="gTd-v5-qij" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="vPz-Ag-Iil"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnMore" destination="gTd-v5-qij" id="9PD-3M-r94"/>
+                <outlet property="labTitle" destination="nJd-qy-62o" id="iM6-Ne-lBF"/>
+                <outlet property="labType" destination="9OJ-Tg-GeQ" id="LGA-Vn-VJc"/>
+            </connections>
+            <point key="canvasLocation" x="118" y="109.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="vi_tjgz" width="20" height="20"/>
+        <image name="vi_tjgz_1" width="20" height="20"/>
+        <image name="vi_vi" width="25" height="20"/>
+    </resources>
+</document>

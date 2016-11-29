@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XBDiscoveryAddCell" rowHeight="47" id="WF6-yw-s8C" customClass="XBDiscoveryAddCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WF6-yw-s8C" id="BCl-ih-fRs">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vi_vi" translatesAutoresizingMaskIntoConstraints="NO" id="fuk-LM-aG0">
+                        <rect key="frame" x="8" y="8" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="Cvw-1Q-kUh"/>
+                            <constraint firstAttribute="height" constant="20" id="HqQ-lX-9nU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="奇智奇材-社会(小班)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0q4-XQ-4Ie">
+                        <rect key="frame" x="36" y="22.5" width="283" height="19"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="培养小朋友对社会的初步感知和交往能力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQq-a8-HPF">
+                        <rect key="frame" x="36" y="8" width="221" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14.5" id="NyP-vh-xn8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r35-VV-KSH">
+                        <rect key="frame" x="327" y="15.5" width="40" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="YnW-9E-Vhg"/>
+                            <constraint firstAttribute="width" constant="40" id="d5Z-Hh-OMS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" backgroundImage="添加">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected" backgroundImage="移除"/>
+                        <connections>
+                            <action selector="addButtonClick:" destination="WF6-yw-s8C" eventType="touchUpInside" id="F8X-sQ-Du1"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0q4-XQ-4Ie" firstAttribute="top" secondItem="fQq-a8-HPF" secondAttribute="bottom" id="86z-HF-vRU"/>
+                    <constraint firstItem="fQq-a8-HPF" firstAttribute="top" secondItem="BCl-ih-fRs" secondAttribute="top" constant="8" id="EHr-pO-J9n"/>
+                    <constraint firstItem="r35-VV-KSH" firstAttribute="leading" secondItem="0q4-XQ-4Ie" secondAttribute="trailing" constant="8" id="I2H-Jn-X8e"/>
+                    <constraint firstItem="fuk-LM-aG0" firstAttribute="top" secondItem="BCl-ih-fRs" secondAttribute="top" constant="8" id="TpP-jk-oQJ"/>
+                    <constraint firstItem="fuk-LM-aG0" firstAttribute="leading" secondItem="BCl-ih-fRs" secondAttribute="leading" constant="8" id="V5f-lI-8Au"/>
+                    <constraint firstItem="0q4-XQ-4Ie" firstAttribute="leading" secondItem="fQq-a8-HPF" secondAttribute="leading" id="Z6T-pm-T3w"/>
+                    <constraint firstAttribute="bottom" secondItem="0q4-XQ-4Ie" secondAttribute="bottom" constant="8" id="e6a-pk-La9"/>
+                    <constraint firstItem="r35-VV-KSH" firstAttribute="centerY" secondItem="BCl-ih-fRs" secondAttribute="centerY" id="pLy-Ae-JWR"/>
+                    <constraint firstItem="fQq-a8-HPF" firstAttribute="leading" secondItem="fuk-LM-aG0" secondAttribute="trailing" constant="8" id="uh9-ev-fZf"/>
+                    <constraint firstAttribute="trailing" secondItem="r35-VV-KSH" secondAttribute="trailing" constant="8" id="wsj-Ar-G9Q"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="0q4-XQ-4Ie" id="Amy-1e-15q"/>
+                <outlet property="titleLabel" destination="fQq-a8-HPF" id="LDK-u3-2M1"/>
+            </connections>
+            <point key="canvasLocation" x="-161.5" y="90.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="vi_vi" width="25" height="20"/>
+        <image name="添加" width="80" height="37"/>
+        <image name="移除" width="80" height="37"/>
+    </resources>
+</document>

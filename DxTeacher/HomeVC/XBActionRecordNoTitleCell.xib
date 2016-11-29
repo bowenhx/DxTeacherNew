@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XBActionRecordNoTitleCell" rowHeight="59" id="EYR-pv-e3A" customClass="XBActionRecordNoTitleCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EYR-pv-e3A" id="66e-Wy-4u0">
+                <frame key="frameInset" width="375" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="行为描述" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRr-TJ-87J">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="8AV-Rf-w86"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天主动与两个小朋友交流玩耍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3b-Ph-xgb">
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016.7.22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ag-y5-lhx">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="59" id="Szm-9G-ksy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="f3b-Ph-xgb" firstAttribute="leading" secondItem="66e-Wy-4u0" secondAttribute="leading" constant="8" id="26e-hc-u9a"/>
+                    <constraint firstAttribute="trailing" secondItem="9Ag-y5-lhx" secondAttribute="trailing" constant="8" id="8fd-5v-1ZK"/>
+                    <constraint firstItem="eRr-TJ-87J" firstAttribute="top" secondItem="66e-Wy-4u0" secondAttribute="top" constant="8" id="EdI-ZQ-uOG"/>
+                    <constraint firstAttribute="bottom" secondItem="9Ag-y5-lhx" secondAttribute="bottom" constant="8" id="Jhj-nX-6Qs"/>
+                    <constraint firstAttribute="bottom" secondItem="f3b-Ph-xgb" secondAttribute="bottom" constant="8" id="KJx-0G-dfp"/>
+                    <constraint firstItem="f3b-Ph-xgb" firstAttribute="top" secondItem="eRr-TJ-87J" secondAttribute="bottom" constant="8" id="YEW-Xp-g4j"/>
+                    <constraint firstItem="9Ag-y5-lhx" firstAttribute="leading" secondItem="f3b-Ph-xgb" secondAttribute="trailing" constant="8" id="e35-Z1-D2C"/>
+                    <constraint firstItem="eRr-TJ-87J" firstAttribute="leading" secondItem="66e-Wy-4u0" secondAttribute="leading" constant="8" id="zQD-IP-eKA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-65.5" y="15.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,40 @@
+//
+//  PrefixHeader.pch
+//  DxTeacher
+//
+//  Created by 周旭斌 on 2016/11/20.
+//  Copyright © 2016年 XXTechnology Co.,Ltd. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kScreenBounds [UIScreen mainScreen].bounds
+#define XBUserDefaults [NSUserDefaults standardUserDefaults]
+#define XBNotificationCenter [NSNotificationCenter defaultCenter]
+#define XBThemeColor XBColor(217, 117, 179, 1.0)
+#define XBFont(x) [UIFont systemFontOfSize:(x)]
+// 前缀
+#define XBURLHEADER @"http://dx.sitemn.com"
+
+// URL前缀,只要给参数就好了
+#define XBURLPREFIXX @"http://dx.sitemn.com/Ser/Teachers.ashx"
+#define XBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+#import "UIView+Extension.h"
+#import <MBProgressHUD.h>
+#import "AppDefine.h"
+#import "UIImageView+WebCache.h"
+
+#ifdef DEBUG
+#define XBLog(...) NSLog(__VA_ARGS__)
+
+#else
+
+#define XBLog(...)
+
+
+#endif
+
+#endif

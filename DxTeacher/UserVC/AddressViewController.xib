@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddressViewController">
+            <connections>
+                <outlet property="_addressBtn1" destination="j3p-1M-gn3" id="Sb1-S3-VQ1"/>
+                <outlet property="_addressBtn2" destination="7yJ-2o-jr9" id="nbI-yH-g4C"/>
+                <outlet property="_headView" destination="sNv-EC-pEO" id="l9W-wy-Slr"/>
+                <outlet property="_tableView" destination="86V-zr-Aq9" id="mL6-8m-H82"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNv-EC-pEO">
+                    <subviews>
+                        <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yJ-2o-jr9">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="125" id="Lwp-NJ-SGF"/>
+                                <constraint firstAttribute="height" constant="34" id="xde-ce-rPe"/>
+                            </constraints>
+                            <state key="normal" title="园所通讯录">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="selectAddressType:" destination="-1" eventType="touchUpInside" id="VWX-0P-cHG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3p-1M-gn3">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="125" id="QcH-Po-FA9"/>
+                                <constraint firstAttribute="height" constant="30" id="nWg-ew-XNg"/>
+                            </constraints>
+                            <state key="normal" title="家长通讯录">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="selectAddressType:" destination="-1" eventType="touchUpInside" id="txx-8r-wKx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="7yJ-2o-jr9" firstAttribute="top" secondItem="sNv-EC-pEO" secondAttribute="top" constant="3" id="5AR-t5-xfm"/>
+                        <constraint firstItem="j3p-1M-gn3" firstAttribute="leading" secondItem="sNv-EC-pEO" secondAttribute="leading" constant="35" id="T5o-Pu-1yO"/>
+                        <constraint firstAttribute="height" constant="40" id="c5R-bl-wco"/>
+                        <constraint firstItem="j3p-1M-gn3" firstAttribute="top" secondItem="sNv-EC-pEO" secondAttribute="top" constant="5" id="dKk-sj-ahk"/>
+                        <constraint firstAttribute="trailing" secondItem="7yJ-2o-jr9" secondAttribute="trailing" constant="31" id="rwz-7y-f1a"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="35" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="86V-zr-Aq9">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="wdG-Wt-nyx"/>
+                        <outlet property="delegate" destination="-1" id="34r-2U-tJW"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sNv-EC-pEO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="6rx-AR-yBF"/>
+                <constraint firstAttribute="bottom" secondItem="86V-zr-Aq9" secondAttribute="bottom" id="6vg-rk-J3u"/>
+                <constraint firstAttribute="trailing" secondItem="sNv-EC-pEO" secondAttribute="trailing" constant="-2" id="70o-dz-gbN"/>
+                <constraint firstItem="sNv-EC-pEO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-2" id="Ri6-fD-pY4"/>
+                <constraint firstItem="86V-zr-Aq9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RlC-Tb-bRc"/>
+                <constraint firstItem="86V-zr-Aq9" firstAttribute="top" secondItem="sNv-EC-pEO" secondAttribute="bottom" id="SgW-P5-2wl"/>
+                <constraint firstAttribute="trailing" secondItem="86V-zr-Aq9" secondAttribute="trailing" id="gLK-Ue-jhg"/>
+            </constraints>
+            <point key="canvasLocation" x="122" y="-383"/>
+        </view>
+    </objects>
+</document>
