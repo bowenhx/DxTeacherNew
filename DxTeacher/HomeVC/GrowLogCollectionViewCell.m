@@ -18,14 +18,14 @@
     self.contentView.layer.borderColor = XBColor(235, 235, 235, 1.0).CGColor;
     self.contentView.layer.borderWidth = 1.0;
     
-//    CGFloat width = (kScreenWidth - 80) / 3 - 50;
-    _iconBtn.layer.cornerRadius = 25;
+    CGFloat width = (kScreenWidth - 80) / 3 - 50;
+    _iconBtn.layer.cornerRadius = width * 0.5;
     _iconBtn.layer.masksToBounds = YES;
     
-    _labRZ.layer.cornerRadius = 3;
+    _labRZ.layer.cornerRadius = 8;
     _labRZ.layer.masksToBounds = YES;
     
-    _labSL.layer.cornerRadius = 3;
+    _labSL.layer.cornerRadius = 8;
     _labSL.layer.masksToBounds = YES;
 }
 - (void)setItem:(NSDictionary *)item{

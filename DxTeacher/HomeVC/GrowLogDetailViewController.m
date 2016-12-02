@@ -31,6 +31,7 @@
     [self.rightBtn setTitle:@"写日志" forState:0];
     
     [self.rightBtn setTitleColor:[UIColor whiteColor] forState:0];
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 - (void)loadNewData{
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRefreshLogData) name:@"refreLogNotification" object:nil];

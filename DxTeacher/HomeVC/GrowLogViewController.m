@@ -5,7 +5,7 @@
 //  Created by ligb on 16/11/15.
 //  Copyright © 2016年 XXTechnology Co.,Ltd. All rights reserved.
 //
-#define SPACE 20  //图片间隔20
+#define SPACE (kScreenWidth < 414 ? 10 : 20 )  //图片间隔20
 #import "GrowLogViewController.h"
 #import "ItemViewBtn.h"
 #import "GrowLogDetailViewController.h"
@@ -16,6 +16,7 @@
     __weak IBOutlet UICollectionView *_collectionView;
     
 }
+@property (nonatomic, weak) UICollectionView *collectionView;
 @end
 
 @implementation GrowLogViewController
@@ -25,20 +26,47 @@
     
     self.title = @"成长日志";
     
+    [self collectionView];
 }
+
+- (UICollectionView *)collectionView {
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        flowLayout.itemSize = CGSizeMake((kScreenWidth - 4 * SPACE) / 3, (kScreenWidth - 4 * SPACE) / 3);
+        flowLayout.minimumLineSpacing = SPACE;
+        flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        flowLayout.minimumInteritemSpacing = SPACE;
+        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight-64) collectionViewLayout:flowLayout];
+        collectionView.dataSource = self;
+        collectionView.delegate = self;
+        UINib *cellNib = [UINib nibWithNibName:@"GrowLogCollectionViewCell" bundle:[NSBundle mainBundle]];
+       [collectionView registerNib:cellNib forCellWithReuseIdentifier:@"GrowLogCollectionViewCell"];
+        collectionView.backgroundColor = [UIColor whiteColor];
+        collectionView.contentInset = UIEdgeInsetsMake(SPACE, SPACE, SPACE, SPACE);
+        [self.view addSubview:collectionView];
+        _collectionView = collectionView;
+    }
+    return _collectionView;
+}
+
+
+
 - (void)loadNewView{
-    float layoutW = (self.screen_W - 4 * SPACE) / 3;
-    
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(layoutW , layoutW);
-    flowLayout.minimumLineSpacing = SPACE;
-    flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    flowLayout.minimumInteritemSpacing = SPACE;
-    _collectionView.collectionViewLayout = flowLayout;
-    UINib *cellNib = [UINib nibWithNibName:@"GrowLogCollectionViewCell" bundle:nil];
-    [_collectionView registerNib:cellNib forCellWithReuseIdentifier:@"growLogViewCell"];
-    _collectionView.backgroundColor = [UIColor whiteColor];
-    _collectionView.contentInset = UIEdgeInsetsMake(20, 19, 20, 19);
+//    float layoutW = (self.screen_W - 4 * SPACE) / 3;
+//    float layoutH = layoutW;
+//    if (self.screen_W < 414) {
+//        layoutH += 30;
+//    }
+//    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+//    flowLayout.itemSize = CGSizeMake(layoutW , layoutH);
+//    flowLayout.minimumLineSpacing = SPACE;
+//    flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+//    flowLayout.minimumInteritemSpacing = SPACE;
+//    _collectionView.collectionViewLayout = flowLayout;
+//    UINib *cellNib = [UINib nibWithNibName:@"GrowLogCollectionViewCell" bundle:nil];
+//    [_collectionView registerNib:cellNib forCellWithReuseIdentifier:@"growLogViewCell"];
+//    _collectionView.backgroundColor = [UIColor whiteColor];
+//    _collectionView.contentInset = UIEdgeInsetsMake(20, 19, 20, 19);
 
 }
 
@@ -53,7 +81,7 @@
          
             //[self loadItemView:model.data];
             [self.dataSource setArray:model.data];
-            [_collectionView reloadData];
+            [self.collectionView reloadData];
         }else{
             [self.view showHUDTitleView:model.message image:nil];
         }
@@ -74,7 +102,7 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    GrowLogCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"growLogViewCell" forIndexPath:indexPath];
+    GrowLogCollectionViewCell *cell = [_collectionView dequeueReusableCellWithReuseIdentifier:@"GrowLogCollectionViewCell" forIndexPath:indexPath];
     cell.item = self.dataSource[indexPath.row];
     return cell;
 }

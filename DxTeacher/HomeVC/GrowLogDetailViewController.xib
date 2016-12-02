@@ -32,7 +32,7 @@
                 <constraint firstItem="E7E-eR-9p6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Spm-Rj-beV"/>
                 <constraint firstItem="E7E-eR-9p6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="y8I-H0-L11"/>
             </constraints>
-            <point key="canvasLocation" x="-196" y="17"/>
+            <point key="canvasLocation" x="-68" y="23"/>
         </view>
     </objects>
 </document>

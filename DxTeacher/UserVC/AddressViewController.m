@@ -44,7 +44,7 @@
     _addressBtn1.selected = YES;
     
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(self.screen_W/2-1, _headView.y, 1, _headView.h)];
-    
+
     lineView.backgroundColor = [UIColor colorLineBg];
     [_headView addSubview:lineView];
 }
@@ -57,6 +57,7 @@
         NSLog(@"data = %@",model.data);
         if (model.status == 0) {
             //请求成功
+            
             [self.dataSource setArray:model.data];
             [_tableView reloadData];
         }else{

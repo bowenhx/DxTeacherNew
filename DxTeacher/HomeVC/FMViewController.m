@@ -25,6 +25,7 @@
     [super viewDidLoad];
     self.title = @"大象FM";
     self.automaticallyAdjustsScrollViewInsets = NO;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];

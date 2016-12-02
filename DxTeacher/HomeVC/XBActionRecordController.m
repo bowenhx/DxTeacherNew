@@ -196,7 +196,7 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 150;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
+
     _iconImageView.layer.cornerRadius = 30.0;
     _iconImageView.layer.masksToBounds = YES;
 }

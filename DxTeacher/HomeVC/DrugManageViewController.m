@@ -26,7 +26,7 @@
     self.title = @"用药条管理";
     
     [self.rightBtn setTitle:@"新建" forState:0];
-    
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadNewData) name:@"refreshLoadDrugdata" object:nil];
 }
 

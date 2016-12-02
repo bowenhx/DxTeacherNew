@@ -49,7 +49,7 @@
 //        _tableView.layer.borderWidth = 1;
 //        _tableView.layer.borderColor = [UIColor redColor].CGColor;
         [self addSubview:_tableView];
-        
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.translatesAutoresizingMaskIntoConstraints = NO;
         
         //寬度

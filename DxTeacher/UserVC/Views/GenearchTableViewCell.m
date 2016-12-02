@@ -29,8 +29,20 @@
     [self.icon img_setImageWithURL:info[@"avatar"] placeholderImage:nil];
     
     self.name.text = info[@"childrenname"];
-    self.name2.text = info[@"family"][0][@"familyname"];
-    self.name3.text = info[@"family"][1][@"familyname"];
+    NSArray *family = info[@"family"];
+    if (family.count) {
+         self.name2.text = info[@"family"][0][@"familyname"];
+        if (family.count > 1) {
+            self.name3.text = info[@"family"][1][@"familyname"];
+        }else{
+            self.name3.text = @"";
+        }
+    }else{
+        self.name2.text = @"";
+        self.name3.text = @"";
+    }
+   
+    
 }
 
 - (IBAction)playTelPhoneAction:(UIButton *)sender {

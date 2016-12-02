@@ -30,6 +30,7 @@
         _tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
 //        _tableView.backgroundColor = [UIColor colorAppBg];
         _tableView.scrollEnabled = NO;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 //        _tableView.separatorColor = @"#31B7B6".color;
 //        _tableView.separatorColor = @"#D04476".color;
         _tableView.rowHeight = 40;

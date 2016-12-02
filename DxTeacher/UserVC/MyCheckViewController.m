@@ -20,7 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的考勤";
-    
     [self.rightBtn setTitle:@"新建" forState:0];
 }
 

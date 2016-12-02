@@ -28,6 +28,7 @@
     [super viewDidLoad];
     self.title = @"详情";
     
+     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     //添加互动投诉 回复通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:@"reportNotificationCenter" object:nil];

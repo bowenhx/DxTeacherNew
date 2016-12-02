@@ -46,6 +46,7 @@
         _tableView.dataSource = self;
 //        _tableView.layer.borderWidth = 1;
 //        _tableView.layer.borderColor = [UIColor redColor].CGColor;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self addSubview:_tableView];
         
         _tableView.translatesAutoresizingMaskIntoConstraints = NO;
