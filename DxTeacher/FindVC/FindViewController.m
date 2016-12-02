@@ -97,20 +97,8 @@
     [self loopView];
 }
 - (void)loadItemNewViews:(NSArray *)items{
-//    _scrollView.layer.borderWidth = 1;
-//    _scrollView.layer.borderColor = [UIColor grayColor].CGColor;
-    
+
     [self.dataSource setArray:items];
-    
-    
-//    NSArray *images = @[
-//                        @[@"kqgl_1_unpressed",@"vi_jztxl",@"教堂与课件"],
-//                        @[@"xwjll_1_unpressed",@"vi_jxzd",@"教学指导"],
-//                        @[@"fbgl_1_unpressed",@"vi_czlj",@"成长路径"],
-//                        @[@"jcsj_1_unpressed",@"vi_jchd",@"精彩活动"],
-//                        @[@"dxfm_1_unpressed",@"vi_wntj",@"为您推荐"],
-//                        @[@"czrz-_1_unpressed",@"vi_rmkj",@"热门课件"]
-//                        ];
     
     float btn_wh = (self.screen_W - SPACE * 4) / 3;
     
@@ -169,11 +157,6 @@
     _listViewCell = listView;
     [_scrollView addSubview:listView];
     
-    
-//    FindListViewCell *listImgView = [FindListViewCell findListImgView];
-//    listImgView.frame = CGRectMake(0, listView.max_Y, self.screen_W, 100);
-//    listImgView.labLine.backgroundColor = @"#cccccc".color;
-//    [_scrollView addSubview:listImgView];
     XBFindHotRecommendView *hotRecommendView = [XBFindHotRecommendView findHotRecommendView];
     _recommendView = hotRecommendView;
     hotRecommendView.moreBlock = ^() {
@@ -199,7 +182,7 @@
 - (void)loadItemData{
     [self.view showHUDActivityView:@"正在加载" shade:NO];
     [[ANet share] post:BASE_URL params:@{@"action":@"getFind6Class"} completion:^(BNetData *model, NSString *netErr) {
-        [self.view removeHUDActivity];
+       
         NSLog(@"data = %@",model.data);
         if (model.status == 0) {
             NSArray *items = model.data;
@@ -232,84 +215,25 @@
         XBHotRecommendController *hotRecommendVC = [[XBHotRecommendController alloc] init];
         [self.navigationController pushViewController:hotRecommendVC animated:YES];
     }
-//    switch (btn.tag) {
-//        case 0:
-//        {//教堂与课件
-//            CoursewareViewController *couresewareVC = [[CoursewareViewController alloc] initWithNibName:@"CoursewareViewController" bundle:nil];
-//            couresewareVC.aid = [self.dataSource[btn.tag][@"id"] integerValue];
-//            couresewareVC.navigationItem.title = self.dataSource[btn.tag][@"title"];
-//            [self.navigationController pushViewController:couresewareVC animated:YES];
-//        }
-//            break;
-//        case 1:
-//        {//
-//            
-//        }
-//            break;
-//        case 2:
-//        {
-//            
-//        }
-//            break;
-//        case 3:
-//        {
-//            
-//        }
-//            break;
-//        case 4:
-//        {
-//            
-//        }
-//            break;
-//        case 5:
-//        {
-//            
-//        }
-//            break;
-//        case 6:
-//        {
-//            
-//        }
-//            break;
-//        case 7:
-//        {
-//            
-//        }
-//            break;
-//        case 8:
-//        {
-//            
-//        }
-//            break;
-//        case 9:
-//        {
-//            
-//        }
-//            break;
-//            
-//        default:
-//            break;
-//    }
-    
     
 }
 
 #pragma mark - 获取我的关注
 - (void)requestForMyAttention {
     NSDictionary *userInfo = [SavaData parseDicFromFile:User_File]; // 3
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    //[MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSDictionary *parameters = @{@"action" : @"getUNSCList",
                                  @"uid" : userInfo[@"id"],
                                  @"page" : @"1"};
     [[XBNetWorkTool shareNetWorkTool] GET:XBURLPREFIXX parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            //[MBProgressHUD hideHUDForView:self.view animated:YES];
             self.collectionArray = [XBElephantModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
             _listViewCell.elephantModel = self.collectionArray[0];
         });
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
+           // [MBProgressHUD hideHUDForView:self.view animated:YES];
             MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
             hud.labelText = @"网络繁忙,请稍后再试!";
             [hud hide:YES afterDelay:3.0];
@@ -325,14 +249,16 @@
                                  progress:^(NSProgress * _Nonnull downloadProgress) {}
                                   success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                       dispatch_async(dispatch_get_main_queue(), ^{
-                                          [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                           [self.view removeHUDActivity];
+                                          //[MBProgressHUD hideHUDForView:self.view animated:YES];
                                           self.hotRecommendArray = [XBElephantModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
                                           _recommendView.dataList = self.hotRecommendArray;
                                       });
                                   }
                                   failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                                       dispatch_async(dispatch_get_main_queue(), ^{
-                                          [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                           [self.view removeHUDActivity];
+                                          //[MBProgressHUD hideHUDForView:self.view animated:YES];
                                           MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
                                           hud.labelText = @"网络繁忙,请稍后再试!";
                                           [hud hide:YES afterDelay:3.0];
@@ -342,14 +268,14 @@
 
 #pragma mark - 获取首页大图
 - (void)requestForBanner {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    //[MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [[XBNetWorkTool shareNetWorkTool] GET:XBURLPREFIXX
                                parameters:@{@"action" : @"getNewsList",
                                             @"aid" : @"131"}
                                  progress:^(NSProgress * _Nonnull downloadProgress) {}
                                   success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                       dispatch_async(dispatch_get_main_queue(), ^{
-                                          [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                         // [MBProgressHUD hideHUDForView:self.view animated:YES];
                                           self.bannerArray = [XBElephantModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
                                           for (XBElephantModel *elephantModel in self.bannerArray) {
                                               [self.imageUrls addObject:[XBURLHEADER stringByAppendingString:elephantModel.img_url]];
@@ -359,7 +285,7 @@
                                   }
                                   failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                                       dispatch_async(dispatch_get_main_queue(), ^{
-                                          [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                          //[MBProgressHUD hideHUDForView:self.view animated:YES];
                                           MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
                                           hud.labelText = @"网络繁忙,请稍后再试!";
                                           [hud hide:YES afterDelay:3.0];

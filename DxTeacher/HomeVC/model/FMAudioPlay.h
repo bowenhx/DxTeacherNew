@@ -7,16 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BRuntimeObj.h"
 
 @interface FMAudioPlay : NSObject
 
-+ (FMAudioPlay *)sharePlay:(NSString *)url;
++ (FMAudioPlay *)share;
 
 - (instancetype)initWithAudioURL:(NSString *)url;
 
 @property (nonatomic , copy) NSString *playURL;
 
 @property (nonatomic,strong) AVAudioPlayer *audioPlayer;//播放器
+
+- (void)loadPlayerDataBlock:(void (^)(AVAudioPlayer *play))play;
+
 
 + (void)audioPlayerURL:(NSString *)vudioURL Block:(void (^)(NSData *data))block;
 

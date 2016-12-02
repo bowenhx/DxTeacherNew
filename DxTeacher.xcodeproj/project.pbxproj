@@ -15,6 +15,10 @@
 		920942A41DC8836E0047864B /* TeacherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9209429F1DC8836E0047864B /* TeacherTableViewCell.xib */; };
 		920942AA1DC885130047864B /* GenearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 920942A81DC885130047864B /* GenearchTableViewCell.m */; };
 		920942AB1DC885130047864B /* GenearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920942A91DC885130047864B /* GenearchTableViewCell.xib */; };
+		9227E4401DF1067600A60E37 /* DrugManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9227E43F1DF1067600A60E37 /* DrugManageTableViewCell.xib */; };
+		9227E4421DF108A900A60E37 /* NewUseDrugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9227E4411DF108A900A60E37 /* NewUseDrugViewController.m */; };
+		9227E44B1DF1267A00A60E37 /* BRuntimeObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 9227E44A1DF1267A00A60E37 /* BRuntimeObj.m */; };
+		9227E44D1DF1269900A60E37 /* FMAudioTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9227E44C1DF1269900A60E37 /* FMAudioTableViewCell.m */; };
 		92390D3C1DDDA681001D2570 /* PraiseItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92390D3B1DDDA681001D2570 /* PraiseItemView.m */; };
 		92632A621DC8462B000D425A /* BKReplyInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92632A611DC8462B000D425A /* BKReplyInputView.m */; };
 		9267D9BF1DE6E2B300CC83CE /* GrowLogCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9267D9BD1DE6E2B300CC83CE /* GrowLogCollectionViewCell.m */; };
@@ -150,7 +154,6 @@
 		B509C2491DC4E374001115BB /* DrugManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C2471DC4E374001115BB /* DrugManageViewController.m */; };
 		B509C24A1DC4E374001115BB /* DrugManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B509C2481DC4E374001115BB /* DrugManageViewController.xib */; };
 		B509C24E1DC4E43E001115BB /* DrugManageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C24C1DC4E43E001115BB /* DrugManageTableViewCell.m */; };
-		B509C24F1DC4E43E001115BB /* DrugManageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B509C24D1DC4E43E001115BB /* DrugManageTableViewCell.xib */; };
 		B509C2531DC4EE8D001115BB /* ClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C2511DC4EE8D001115BB /* ClassesViewController.m */; };
 		B509C2541DC4EE8D001115BB /* ClassesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B509C2521DC4EE8D001115BB /* ClassesViewController.xib */; };
 		B509C2581DC4F324001115BB /* TrendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B509C2561DC4F324001115BB /* TrendsTableViewCell.m */; };
@@ -232,7 +235,6 @@
 		B5153AB91DBE3CED00D839BA /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153AB41DBE3CED00D839BA /* MMDrawerVisualState.m */; };
 		B5153ABA1DBE3CED00D839BA /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153AB61DBE3CED00D839BA /* UIViewController+MMDrawerController.m */; };
 		B5153ABE1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5153ABD1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m */; };
-		B541B20E1DE1E30A00A04938 /* NewUseDrugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B541B20C1DE1E30A00A04938 /* NewUseDrugViewController.m */; };
 		B541B20F1DE1E30A00A04938 /* NewUseDrugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B541B20D1DE1E30A00A04938 /* NewUseDrugViewController.xib */; };
 		B599D4EA1DC38895006DA4F6 /* FindListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B599D4E91DC38895006DA4F6 /* FindListViewCell.m */; };
 		B599D4EC1DC388B9006DA4F6 /* FindListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B599D4EB1DC388B9006DA4F6 /* FindListViewCell.xib */; };
@@ -240,7 +242,6 @@
 		B599D4F11DC397C6006DA4F6 /* FindTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B599D4EF1DC397C6006DA4F6 /* FindTableViewCell.xib */; };
 		B5AE182D1DC58C5900E45412 /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AE182B1DC58C5900E45412 /* FMViewController.m */; };
 		B5AE182E1DC58C5900E45412 /* FMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5AE182C1DC58C5900E45412 /* FMViewController.xib */; };
-		B5AE18351DC58C8500E45412 /* FMAudioTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AE18301DC58C8500E45412 /* FMAudioTableViewCell.m */; };
 		B5AE18361DC58C8500E45412 /* FMAudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5AE18311DC58C8500E45412 /* FMAudioTableViewCell.xib */; };
 		B5AE183C1DC5968700E45412 /* FMVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AE183A1DC5968700E45412 /* FMVideoTableViewCell.m */; };
 		B5AE183D1DC5968700E45412 /* FMVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5AE183B1DC5968700E45412 /* FMVideoTableViewCell.xib */; };
@@ -270,6 +271,11 @@
 		920942A71DC885130047864B /* GenearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenearchTableViewCell.h; sourceTree = "<group>"; };
 		920942A81DC885130047864B /* GenearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenearchTableViewCell.m; sourceTree = "<group>"; };
 		920942A91DC885130047864B /* GenearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenearchTableViewCell.xib; sourceTree = "<group>"; };
+		9227E43F1DF1067600A60E37 /* DrugManageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugManageTableViewCell.xib; sourceTree = "<group>"; };
+		9227E4411DF108A900A60E37 /* NewUseDrugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewUseDrugViewController.m; sourceTree = "<group>"; };
+		9227E4491DF1267A00A60E37 /* BRuntimeObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRuntimeObj.h; sourceTree = "<group>"; };
+		9227E44A1DF1267A00A60E37 /* BRuntimeObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRuntimeObj.m; sourceTree = "<group>"; };
+		9227E44C1DF1269900A60E37 /* FMAudioTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMAudioTableViewCell.m; sourceTree = "<group>"; };
 		92390D3A1DDDA681001D2570 /* PraiseItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PraiseItemView.h; sourceTree = "<group>"; };
 		92390D3B1DDDA681001D2570 /* PraiseItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PraiseItemView.m; sourceTree = "<group>"; };
 		92632A601DC8462B000D425A /* BKReplyInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKReplyInputView.h; sourceTree = "<group>"; };
@@ -490,7 +496,6 @@
 		B509C2481DC4E374001115BB /* DrugManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugManageViewController.xib; sourceTree = "<group>"; };
 		B509C24B1DC4E43E001115BB /* DrugManageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugManageTableViewCell.h; sourceTree = "<group>"; };
 		B509C24C1DC4E43E001115BB /* DrugManageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugManageTableViewCell.m; sourceTree = "<group>"; };
-		B509C24D1DC4E43E001115BB /* DrugManageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugManageTableViewCell.xib; sourceTree = "<group>"; };
 		B509C2501DC4EE8D001115BB /* ClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassesViewController.h; sourceTree = "<group>"; };
 		B509C2511DC4EE8D001115BB /* ClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassesViewController.m; sourceTree = "<group>"; };
 		B509C2521DC4EE8D001115BB /* ClassesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassesViewController.xib; sourceTree = "<group>"; };
@@ -660,7 +665,6 @@
 		B5153ABC1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleDrawerVisualStateManager.h; sourceTree = "<group>"; };
 		B5153ABD1DBE409C00D839BA /* MMExampleDrawerVisualStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleDrawerVisualStateManager.m; sourceTree = "<group>"; };
 		B541B20B1DE1E30A00A04938 /* NewUseDrugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewUseDrugViewController.h; sourceTree = "<group>"; };
-		B541B20C1DE1E30A00A04938 /* NewUseDrugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewUseDrugViewController.m; sourceTree = "<group>"; };
 		B541B20D1DE1E30A00A04938 /* NewUseDrugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewUseDrugViewController.xib; sourceTree = "<group>"; };
 		B599D4E81DC38895006DA4F6 /* FindListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindListViewCell.h; sourceTree = "<group>"; };
 		B599D4E91DC38895006DA4F6 /* FindListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindListViewCell.m; sourceTree = "<group>"; };
@@ -672,7 +676,6 @@
 		B5AE182B1DC58C5900E45412 /* FMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMViewController.m; sourceTree = "<group>"; };
 		B5AE182C1DC58C5900E45412 /* FMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMViewController.xib; sourceTree = "<group>"; };
 		B5AE182F1DC58C8500E45412 /* FMAudioTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMAudioTableViewCell.h; sourceTree = "<group>"; };
-		B5AE18301DC58C8500E45412 /* FMAudioTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMAudioTableViewCell.m; sourceTree = "<group>"; };
 		B5AE18311DC58C8500E45412 /* FMAudioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMAudioTableViewCell.xib; sourceTree = "<group>"; };
 		B5AE18391DC5968700E45412 /* FMVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMVideoTableViewCell.h; sourceTree = "<group>"; };
 		B5AE183A1DC5968700E45412 /* FMVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMVideoTableViewCell.m; sourceTree = "<group>"; };
@@ -844,6 +847,8 @@
 				9FE4206D1DE41F0F00D7F729 /* XBLeaveModel.m */,
 				B5EF4E0B1DEDA80C005A6668 /* FMAudioPlay.h */,
 				B5EF4E0C1DEDA80C005A6668 /* FMAudioPlay.m */,
+				9227E4491DF1267A00A60E37 /* BRuntimeObj.h */,
+				9227E44A1DF1267A00A60E37 /* BRuntimeObj.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1355,7 +1360,7 @@
 				B509C2471DC4E374001115BB /* DrugManageViewController.m */,
 				B509C2481DC4E374001115BB /* DrugManageViewController.xib */,
 				B541B20B1DE1E30A00A04938 /* NewUseDrugViewController.h */,
-				B541B20C1DE1E30A00A04938 /* NewUseDrugViewController.m */,
+				9227E4411DF108A900A60E37 /* NewUseDrugViewController.m */,
 				B541B20D1DE1E30A00A04938 /* NewUseDrugViewController.xib */,
 				B509C2501DC4EE8D001115BB /* ClassesViewController.h */,
 				B509C2511DC4EE8D001115BB /* ClassesViewController.m */,
@@ -1450,7 +1455,7 @@
 			isa = PBXGroup;
 			children = (
 				B5AE182F1DC58C8500E45412 /* FMAudioTableViewCell.h */,
-				B5AE18301DC58C8500E45412 /* FMAudioTableViewCell.m */,
+				9227E44C1DF1269900A60E37 /* FMAudioTableViewCell.m */,
 				B5AE18311DC58C8500E45412 /* FMAudioTableViewCell.xib */,
 				B5AE18391DC5968700E45412 /* FMVideoTableViewCell.h */,
 				B5AE183A1DC5968700E45412 /* FMVideoTableViewCell.m */,
@@ -1470,7 +1475,7 @@
 				92DD8D911DBF507500AEF307 /* ItemViewBtn.m */,
 				B509C24B1DC4E43E001115BB /* DrugManageTableViewCell.h */,
 				B509C24C1DC4E43E001115BB /* DrugManageTableViewCell.m */,
-				B509C24D1DC4E43E001115BB /* DrugManageTableViewCell.xib */,
+				9227E43F1DF1067600A60E37 /* DrugManageTableViewCell.xib */,
 				9FA1EFDD1DE09AEF002FDF57 /* XBAddRecordCell.h */,
 				9FA1EFDE1DE09AEF002FDF57 /* XBAddRecordCell.m */,
 				9FA1EFE01DE09AF8002FDF57 /* XBAddRecordCell.xib */,
@@ -1593,7 +1598,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B509C24F1DC4E43E001115BB /* DrugManageTableViewCell.xib in Resources */,
 				92DD8D891DBF3AC900AEF307 /* LoginViewController.xib in Resources */,
 				B5AE18361DC58C8500E45412 /* FMAudioTableViewCell.xib in Resources */,
 				B5153A9B1DBE295700D839BA /* ZLPhotoLib.bundle in Resources */,
@@ -1638,6 +1642,7 @@
 				9FE4208D1DE4438200D7F729 /* XBSaveAttentionCell.xib in Resources */,
 				B509C22B1DC44329001115BB /* FindListImgView.xib in Resources */,
 				9F92D01C1DE2BE5C00DBC581 /* XBAddMonthActionRecordController.xib in Resources */,
+				9227E4401DF1067600A60E37 /* DrugManageTableViewCell.xib in Resources */,
 				92A62DFD1DE448E7006D93F3 /* FindDetailViewController.xib in Resources */,
 				B5AE18421DC5AEEC00E45412 /* VerifyViewController.xib in Resources */,
 				9FC6F9471DE68E4F005F616D /* XBHotRecommentListCell.xib in Resources */,
@@ -1718,6 +1723,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				929FD7BE1DC73D2400C68589 /* CommentView.m in Sources */,
+				9227E44D1DF1269900A60E37 /* FMAudioTableViewCell.m in Sources */,
 				B5153A761DBE295700D839BA /* UIImage+GIF.m in Sources */,
 				B5153A7C1DBE295700D839BA /* UIView+WebCacheOperation.m in Sources */,
 				B5EF4E0D1DEDA80C005A6668 /* FMAudioPlay.m in Sources */,
@@ -1734,10 +1740,10 @@
 				B5153ABA1DBE3CED00D839BA /* UIViewController+MMDrawerController.m in Sources */,
 				92DD8D8E1DBF3B6E00AEF307 /* MBProgressHUD+Add.m in Sources */,
 				92A62DFC1DE448E7006D93F3 /* FindDetailViewController.m in Sources */,
-				B541B20E1DE1E30A00A04938 /* NewUseDrugViewController.m in Sources */,
 				B5153A901DBE295700D839BA /* ZLNavigationController.m in Sources */,
 				9F2C2AF51DE19F4F00DC2D6D /* XBAddWeedMonthController.m in Sources */,
 				9F2C2AEE1DE17E5D00DC2D6D /* XBActionRecordDayCell.m in Sources */,
+				9227E44B1DF1267A00A60E37 /* BRuntimeObj.m in Sources */,
 				9F2C2B0F1DE1CC0200DC2D6D /* XBAddWeekRecordModel.m in Sources */,
 				9F2C2AE61DE17DE400DC2D6D /* XBActionRecordTextCell.m in Sources */,
 				92C3D9C51DE2CCBD00C823DD /* MyCheckTabCell.m in Sources */,
@@ -1747,6 +1753,7 @@
 				B5153A601DBE295700D839BA /* CustomBarButtonItem.m in Sources */,
 				B509C2581DC4F324001115BB /* TrendsTableViewCell.m in Sources */,
 				B5153A691DBE295700D839BA /* SavaData.m in Sources */,
+				9227E4421DF108A900A60E37 /* NewUseDrugViewController.m in Sources */,
 				B5153A671DBE295700D839BA /* BNetData.m in Sources */,
 				B5153A8A1DBE295700D839BA /* ZLPhotoPickerBrowserPhotoView.m in Sources */,
 				B509C2491DC4E374001115BB /* DrugManageViewController.m in Sources */,
@@ -1827,7 +1834,6 @@
 				B5153A7F1DBE295700D839BA /* ZLCamera.m in Sources */,
 				B5153A621DBE295700D839BA /* UIImage+UIImageExt.m in Sources */,
 				B5AE182D1DC58C5900E45412 /* FMViewController.m in Sources */,
-				B5AE18351DC58C8500E45412 /* FMAudioTableViewCell.m in Sources */,
 				9F4B86391DE5BA0E007075A1 /* XBDiscoveryAddCell.m in Sources */,
 				9F2C2AB01DE146F300DC2D6D /* UIView+Extension.m in Sources */,
 				B509C2361DC47205001115BB /* CustomItemView.m in Sources */,
