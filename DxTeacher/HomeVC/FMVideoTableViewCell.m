@@ -28,6 +28,10 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.labLineBg.backgroundColor = [UIColor colorLineBg];
+    
+    self.headView.layer.masksToBounds = YES;
+    self.headView.layer.cornerRadius = 35;
+    
 }
 /**
  *  创建媒体播放控制器
@@ -83,6 +87,12 @@
     self.imgVideo.image = one;
     
     self.moreViewBg.items = info[@"article_zan"];
+    
+    NSArray *itemDZ =  info[@"article_zan"];
+    if ([itemDZ isKindOfClass:[NSArray class]]) {
+        self.moreViewBg.items = itemDZ;
+        self.labNumDZ.text = [NSString stringWithFormat:@"%ld",(long)itemDZ.count];
+    }
 }
 
 - (void)setFindInfo:(NSDictionary *)findInfo{

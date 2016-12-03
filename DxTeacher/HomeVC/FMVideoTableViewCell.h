@@ -29,6 +29,10 @@
 
 @property (weak, nonatomic) IBOutlet PraiseItemView *moreViewBg;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnDZ;
+
+@property (weak, nonatomic) IBOutlet UILabel *labNumDZ;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *labLineBg;
 

@@ -33,6 +33,8 @@
     self.btnPlay.backgroundColor = [UIColor colorAppBg];
     self.btnPlay.layer.cornerRadius = 3;
     
+    self.headView.layer.masksToBounds = YES;
+    self.headView.layer.cornerRadius = 35;
     
 }
 
@@ -54,6 +56,13 @@
     self.labBrowse.text = [NSString stringWithFormat:@"已浏览%@次",info[@"click"]];
     
     self.labContent.text = info[@"title"];
+    
+    NSArray *itemDZ =  info[@"article_zan"];
+    if ([itemDZ isKindOfClass:[NSArray class]]) {
+        self.moreViewBg.items = itemDZ;
+        self.labNumDZ.text = [NSString stringWithFormat:@"%ld",(long)itemDZ.count];
+    }
+    
     
 }
 

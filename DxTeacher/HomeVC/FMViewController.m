@@ -77,6 +77,8 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.viewController = self;
         cell.info = self.dataSource[indexPath.row];
+        cell.btnDZ.tag = indexPath.row;
+        [cell.btnDZ addTarget:self action:@selector(didSelectDianZan:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }else{
         static NSString *xibName = @"FMAudioTableViewCell";
@@ -86,6 +88,8 @@
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.info = self.dataSource[indexPath.row];
+        cell.btnDZ.tag = indexPath.row;
+        [cell.btnDZ addTarget:self action:@selector(didSelectDianZan:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }
     
@@ -98,6 +102,35 @@
         return 245;
     }else
         return 170;
+}
+- (void)didSelectDianZan:(UIButton *)btn{
+    NSDictionary *info = [SavaData parseDicFromFile:User_File];
+
+    NSDictionary *dict = @{@"action":@"doFavorite",
+             @"uid":info[@"id"],
+             @"cid":self.dataSource[btn.tag][@"id"],
+             @"type":@(3)
+             };
+    
+    [self.view showHUDActivityView:@"正在加载" shade:NO];
+    [[ANet share] post:BASE_URL params:dict completion:^(BNetData *model, NSString *netErr) {
+        [self.view removeHUDActivity];
+        NSLog(@"data = %@",model.data);
+        
+        if (netErr) {
+            [self.view showHUDTitleView:netErr image:nil];
+        }else if (model.status == 0) {
+            [self.view showSuccess:model.message];
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self loadNewData];
+            });
+            
+        }else{
+            [self.view showHUDTitleView:model.message image:nil];
+        }
+        
+    }];
 }
 /*
 #pragma mark - Navigation

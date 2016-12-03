@@ -114,8 +114,10 @@
     UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 240, 220)];
     headView.backgroundColor = [UIColor clearColor];
     //头像
-    UIImageView *headImg = [[UIImageView alloc] initWithFrame:CGRectMake((headView.w - 70)/2, 70, 70, 70)];
+    UIImageView *headImg = [[UIImageView alloc] initWithFrame:CGRectMake((headView.w - 80)/2, 70, 80, 80)];
     headImg.userInteractionEnabled = YES;
+    headImg.layer.masksToBounds = YES;
+    headImg.layer.cornerRadius = 40;
     //headImg.layer.borderWidth = 1;
     [headImg img_setImageWithURL:info[@"avatar"] placeholderImage:[UIImage imageNamed:@"userDefineIcon"]];
     [headView addSubview:headImg];

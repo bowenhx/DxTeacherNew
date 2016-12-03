@@ -17,7 +17,9 @@
     // Initialization code
 //    self.headImg.layer.borderWidth = 1;
 //    self.headImg.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    self.headImg.layer.cornerRadius = 5;
+    
+    self.headImg.layer.masksToBounds = YES;
+    self.headImg.layer.cornerRadius = 35;
 //    self.headImg.layer.cornerRadius = 35;
     
 //    self.imagesView.layer.borderWidth = 1;

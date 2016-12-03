@@ -13,6 +13,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    self.imgView.layer.masksToBounds = YES;
+    self.imgView.layer.cornerRadius = 35;
+    
     self.drugView.layer.borderWidth = 1;
     self.drugView.layer.borderColor = [UIColor colorLineBg].CGColor;
     self.drugView.layer.cornerRadius = 7;

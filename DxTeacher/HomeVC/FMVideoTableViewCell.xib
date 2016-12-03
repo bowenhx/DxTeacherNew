@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="239"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="239"/>
+                <frame key="frameInset" width="320" height="238"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1j-vD-bFf">
@@ -84,6 +84,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0ge-eY-vuA">
+                        <color key="backgroundColor" red="0.85786765809999999" green="0.45014876129999998" blue="0.70547086000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="70" id="EQs-fO-AMT"/>
                             <constraint firstAttribute="height" constant="70" id="x7m-bu-Vzs"/>
@@ -142,6 +143,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="btnDZ" destination="WA1-Qx-JnH" id="0q2-OX-amW"/>
                 <outlet property="btnPlay" destination="YUZ-zf-x2k" id="fGy-uH-W5r"/>
                 <outlet property="btnVideoImg" destination="WBh-cX-7BN" id="x1y-Eq-b2E"/>
                 <outlet property="headView" destination="0ge-eY-vuA" id="INp-s1-lwW"/>
@@ -150,6 +152,7 @@
                 <outlet property="labContent" destination="A1j-vD-bFf" id="590-91-tIz"/>
                 <outlet property="labLineBg" destination="Hbi-k8-imy" id="YMI-Eu-Lg4"/>
                 <outlet property="labName" destination="OiB-jL-P9E" id="jp6-ju-nAx"/>
+                <outlet property="labNumDZ" destination="CI8-KH-xTn" id="UMF-12-qSB"/>
                 <outlet property="labTime" destination="zXD-kY-tuX" id="Oq2-Zq-gK3"/>
                 <outlet property="moreViewBg" destination="SFs-l6-Oan" id="Fkw-gw-J1L"/>
             </connections>

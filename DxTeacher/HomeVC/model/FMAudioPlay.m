@@ -36,7 +36,6 @@
                 _audioPlayer= [[AVAudioPlayer alloc] initWithData:data error:&error];
                 //设置播放器属性
                 _audioPlayer.numberOfLoops = 0;//设置为0不循环
-                //        _audioPlayer.delegate = self;
                 [_audioPlayer prepareToPlay];//加载音频文件到缓存
                 
             }
@@ -54,7 +53,6 @@
             _audioPlayer = [[AVAudioPlayer alloc] initWithData:data error:&error];
             //设置播放器属性
             _audioPlayer.numberOfLoops = 0;//设置为0不循环
-            //        _audioPlayer.delegate = self;
             [_audioPlayer prepareToPlay];//加载音频文件到缓存
             play (_audioPlayer);
         }

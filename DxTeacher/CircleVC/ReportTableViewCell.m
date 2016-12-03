@@ -14,6 +14,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.headImg.layer.masksToBounds = YES;
+    self.headImg.layer.cornerRadius = 35;
+    
     self.labLineBg.backgroundColor = [UIColor colorLineBg];
 
     [self.btnCheck setTitle:@"回复" forState:0];
