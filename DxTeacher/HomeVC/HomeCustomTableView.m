@@ -217,7 +217,7 @@
 
 - (CGFloat)itemsImages:(NSDictionary *)item{
     NSArray *items = item[@"albums"];
-    return [ItemVIewsHeight loadItmesCounts:items.count];
+    return [ItemVIewsHeight loadItmesCounts:items.count] + [ItemVIewsHeight loadTextContentsMaxWidth:95 string:item[@"zhaiyao"]];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -225,8 +225,8 @@
     if (self.index == 68) {//互动投诉 高度
         NSArray *comment = self.dataSource[indexPath.row][@"comment"];
         float comH = comment.count * 25;
-        return 195 + height + comH;
+        return 115 + height + comH;
     }
-    return 172 + height;
+    return 100 + height;
 }
 @end
