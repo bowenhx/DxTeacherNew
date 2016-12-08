@@ -5,7 +5,7 @@
 //  Created by Stray on 16/11/29.
 //  Copyright © 2016年 XXTechnology Co.,Ltd. All rights reserved.
 //
-#import <AVFoundation/AVFoundation.h>
+
 #import "FMAudioPlay.h"
 #import "AppDefine.h"
 
@@ -95,4 +95,23 @@
         self.audioPlayer = nil;
     }
 }
+
+
++ (void)videoPlayerURL:(NSString *)videoURL block:(void (^)(UIImage *image))block{
+    NSURL *url = [NSString getPathByAppendString:videoURL];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:url options:nil];
+        AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
+        generate1.appliesPreferredTrackTransform = YES;
+        NSError *err = NULL;
+        CMTime time = CMTimeMake(1, 2);
+        CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
+        UIImage *image = [[UIImage alloc] initWithCGImage:oneRef];
+        block ( image );
+    });
+    
+   
+}
+
+
 @end

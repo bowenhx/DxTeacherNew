@@ -10,6 +10,7 @@
 #import "FMVideoTableViewCell.h"
 #import "FMVideoTableViewCell.h"
 #import "AppDefine.h"
+#import "FMAudioPlay.h"
 
 
 @interface FMVideoTableViewCell ()
@@ -76,15 +77,13 @@
     
     self.labContent.text = info[@"title"];
     
-    self.videoURL = [NSString getPathByAppendString:info[@"attach"][0][@"file_path"]];
-    AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:self.videoURL options:nil];
-    AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
-    generate1.appliesPreferredTrackTransform = YES;
-    NSError *err = NULL;
-    CMTime time = CMTimeMake(1, 2);
-    CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
-    UIImage *one = [[UIImage alloc] initWithCGImage:oneRef];
-    self.imgVideo.image = one;
+    NSString *path = info[@"attach"][0][@"file_path"];
+    @WeakObj(self);
+    [FMAudioPlay videoPlayerURL:path block:^(UIImage *image) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            selfWeak.imgVideo.image = image;
+        });
+    }];
     
     self.moreViewBg.items = info[@"article_zan"];
     
@@ -125,20 +124,17 @@
     
     self.labContent.text = findInfo[@"title"];
     
-    self.videoURL = [NSString getPathByAppendString:findInfo[@"fields"][@"video_src"]];
-    AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:self.videoURL options:nil];
-    AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
-    generate1.appliesPreferredTrackTransform = YES;
-    NSError *err = NULL;
-    CMTime time = CMTimeMake(1, 2);
-    CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
-    UIImage *one = [[UIImage alloc] initWithCGImage:oneRef];
-    self.imgVideo.image = one;
+    NSString *path = findInfo[@"fields"][@"video_src"];
+    @WeakObj(self);
+    [FMAudioPlay videoPlayerURL:path block:^(UIImage *image) {
+          dispatch_async(dispatch_get_main_queue(), ^{
+              selfWeak.imgVideo.image = image;
+          });
+    }];
 }
 - (IBAction)playVideoAction:(UIButton *)sender {
     //播放
     [self.moviePlayer.moviePlayer play];
-    
 }
 
 

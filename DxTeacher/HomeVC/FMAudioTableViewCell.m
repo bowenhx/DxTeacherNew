@@ -12,7 +12,6 @@
 #import "FMAudioPlay.h"
 
 @interface FMAudioTableViewCell (){
-    UIButton *_tempBut;
 
 }
 
