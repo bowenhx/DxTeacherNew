@@ -9,6 +9,9 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "NewUseDrugViewController.h"
 #import "IDImagePickerCoordinator.h"
+#import "FMAudioPlay.h"
+#import "AppDefine.h"
+
 @interface NewUseDrugViewController ()<UITextFieldDelegate,UIActionSheetDelegate>{
     IBOutlet UIView *_datePickViewBg;
     __weak IBOutlet UIDatePicker *_datePickerView;
@@ -197,14 +200,11 @@
                 if ( ![@"" isStringBlank:url] && ( [url hasSuffix:@"mov"] || [url hasSuffix:@"mp4"])) {
                     self.videoURL = [NSString getPathByAppendString:url];
                     if (self.videoURL) {
-                        AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:self.videoURL options:nil];
-                        AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
-                        generate1.appliesPreferredTrackTransform = YES;
-                        NSError *err = NULL;
-                        CMTime time = CMTimeMake(1, 2);
-                        CGImageRef oneRef = [generate1 copyCGImageAtTime:time actualTime:NULL error:&err];
-                        UIImage *image = [[UIImage alloc] initWithCGImage:oneRef];
-                        [button setImage:image forState:0];
+                        [FMAudioPlay videoPlayerURL:url block:^(UIImage *image) {
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                [button setImage:image forState:0];
+                            });
+                        }];
                     }else{
                         [button setBackgroundImage:[UIImage imageNamed:@"dte_vi_add"] forState:0];
                     }

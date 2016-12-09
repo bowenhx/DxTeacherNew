@@ -11,6 +11,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import "FMAudioPlay.h"
 
 @interface IDImagePickerCoordinator () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -88,11 +89,10 @@
     if ([library videoAtPathIsCompatibleWithSavedPhotosAlbum:recordedVideoURL]) {
         [library writeVideoAtPathToSavedPhotosAlbum:recordedVideoURL
                                     completionBlock:^(NSURL *assetURL, NSError *error){
-                                    
-                                    
-                                    }
+            }
          ];
     }
+    
     AVURLAsset *asset1 = [[AVURLAsset alloc] initWithURL:recordedVideoURL options:nil];
     AVAssetImageGenerator *generate1 = [[AVAssetImageGenerator alloc] initWithAsset:asset1];
     generate1.appliesPreferredTrackTransform = YES;
