@@ -206,8 +206,10 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-     NSString *title = self.addressArray[indexPath.section][@"grade"];
+     if (_addressBtn1.selected) {
+         return;
+     }
+    NSString *title = self.addressArray[indexPath.section][@"grade"];
     if ([title isEqualToString:@"园所通讯"]) {
         NSArray *items = [self itemsArr:indexPath.section][indexPath.row];
         NSURL *phoneURL = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@",items[1]]];
