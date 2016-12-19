@@ -12,6 +12,7 @@
 #import "XBAlertView.h"
 #import "AppDefine.h"
 #import "XBAddWeedMonthController.h"
+#import "XBActionRecordModel.h"
 
 @interface XBAddActionRecordController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -33,31 +34,31 @@
     [self requestForDataWith:@"能力"];
 }
 
-- (IBAction)customButtonClick:(UIButton *)sender { // 习惯
+- (IBAction)customButtonClick:(UIButton *)sender { // 特长
     _lastButton.selected = NO;
     sender.selected = YES;
     _lastButton = sender;
-    [self requestForDataWith:@"习惯"];}
+    [self requestForDataWith:@"特长"];}
 
-- (IBAction)natureButtonClick:(UIButton *)sender { // 性格
+- (IBAction)natureButtonClick:(UIButton *)sender { // 思维
+    _lastButton.selected = NO;
+    sender.selected = YES;
+    _lastButton = sender;
+    [self requestForDataWith:@"思维"];
+}
+
+- (IBAction)healthButtonClick:(UIButton *)sender { //性格
     _lastButton.selected = NO;
     sender.selected = YES;
     _lastButton = sender;
     [self requestForDataWith:@"性格"];
 }
 
-- (IBAction)healthButtonClick:(UIButton *)sender { // 健康
+- (IBAction)improveButtonClick:(UIButton *)sender { // 习惯
     _lastButton.selected = NO;
     sender.selected = YES;
     _lastButton = sender;
-    [self requestForDataWith:@"健康"];
-}
-
-- (IBAction)improveButtonClick:(UIButton *)sender { // 改善
-    _lastButton.selected = NO;
-    sender.selected = YES;
-    _lastButton = sender;
-    [self requestForDataWith:@"改善"];
+    [self requestForDataWith:@"习惯"];
 }
 
 // 右边导航栏点击事件
@@ -201,6 +202,15 @@
     }
     [self.rightBtn setImage:[UIImage imageNamed:@"dte_vi_Add_1"] forState:UIControlStateNormal];
     [self.rightBtn setTitle:@"添加" forState:UIControlStateNormal];
+    
+    for (int i=0; i<self.actiontypes.count; i++) {
+        XBActionRecordModel *actionModel = self.actiontypes[i];
+        UILabel *label = [self.view viewWithTag:10+i];
+        if (label) {
+            label.text = actionModel.Name;
+        }
+    }
+    
 }
 
 /*

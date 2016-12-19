@@ -43,6 +43,7 @@
     XBAddActionRecordController *recordVC = [[XBAddActionRecordController alloc] init];
     recordVC.childID = self.baseModel.Childid;
     recordVC.childName = self.baseModel.Childname;
+    recordVC.actiontypes = self.baseModel.Actiontypes;
     recordVC.finishBlock = ^() {
         if (_requestBlock) {
             self.requestBlock();
@@ -133,21 +134,22 @@
     [_iconImageView sd_setImageWithURL:[NSURL URLWithString:[XBURLHEADER stringByAppendingString:baseModel.Childavator]] placeholderImage:[UIImage imageNamed:@"占位图"] options:SDWebImageRetryFailed];
     
     for (XBActionRecordModel *actionModel in baseModel.Actiontypes) {
-        if ([actionModel.Name isEqualToString:@"改善"]) {
-            UILabel *label = _labelArray[4];
-            label.text = [NSString stringWithFormat:@"改善%@项", actionModel.Itemcount];
+        if ([actionModel.Name isEqualToString:@"性格"]) {
+            UILabel *label = _labelArray[3];
+            label.text = [NSString stringWithFormat:@"性格%@项", actionModel.Itemcount];
         }else if ([actionModel.Name isEqualToString:@"能力"]) {
             UILabel *label = _labelArray[0];
             label.text = [NSString stringWithFormat:@"能力%@项", actionModel.Itemcount];
         }else if ([actionModel.Name isEqualToString:@"习惯"]) {
-            UILabel *label = _labelArray[1];
+            UILabel *label = _labelArray[4];
             label.text = [NSString stringWithFormat:@"习惯%@项", actionModel.Itemcount];
-        }else if ([actionModel.Name isEqualToString:@"健康"]) {
-            UILabel *label = _labelArray[3];
-            label.text = [NSString stringWithFormat:@"健康%@项", actionModel.Itemcount];
-        }else if ([actionModel.Name isEqualToString:@"性格"]) {
+        }else if ([actionModel.Name isEqualToString:@"思维"]) {
             UILabel *label = _labelArray[2];
-            label.text = [NSString stringWithFormat:@"性格%@项", actionModel.Itemcount];        }
+            label.text = [NSString stringWithFormat:@"思维%@项", actionModel.Itemcount];
+        }else if ([actionModel.Name isEqualToString:@"特长"]) {
+            UILabel *label = _labelArray[1];
+            label.text = [NSString stringWithFormat:@"特长%@项", actionModel.Itemcount];
+        }
     }
 }
 

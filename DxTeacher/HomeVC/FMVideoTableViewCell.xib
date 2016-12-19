@@ -49,6 +49,7 @@
                                     <constraint firstAttribute="width" constant="30" id="knH-bd-CBp"/>
                                 </constraints>
                                 <state key="normal" image="vi_dz"/>
+                                <state key="selected" image="vi_dz_hong"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CI8-KH-xTn">
                                 <constraints>
@@ -162,6 +163,7 @@
     <resources>
         <image name="bofang" width="45" height="45"/>
         <image name="vi_dz" width="20" height="20"/>
+        <image name="vi_dz_hong" width="20" height="20"/>
         <image name="vi_sp" width="20" height="20"/>
     </resources>
 </document>

@@ -19,4 +19,5 @@ typedef void(^finishBlock)();
  */
 @property (nonatomic, copy) NSString *childID;
 
+@property (nonatomic , copy) NSArray *actiontypes;
 @end

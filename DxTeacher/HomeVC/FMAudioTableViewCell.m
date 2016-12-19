@@ -56,6 +56,7 @@
     
     self.labContent.text = info[@"title"];
     
+    self.btnDZ.selected = [info[@"is_dianzan"] boolValue];
     NSArray *itemDZ =  info[@"article_zan"];
     if ([itemDZ isKindOfClass:[NSArray class]]) {
         self.moreViewBg.items = itemDZ;
