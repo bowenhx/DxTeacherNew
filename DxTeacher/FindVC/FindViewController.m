@@ -131,12 +131,10 @@
         //只需要画两条就行
         if (i < 2) {
             //画竖线
-              UILabel *lineY = [[UILabel alloc] initWithFrame:CGRectMake(iView.max_X, addBtnY, 1, iView.h*2)];
+            UILabel *lineY = [[UILabel alloc] initWithFrame:CGRectMake(iView.max_X, addBtnY, 1, iView.h*2)];
             lineY.backgroundColor = @"#cccccc".color;
             [self.scrollView addSubview:lineY];
         }
-        
-        
         
         
     }
@@ -198,24 +196,12 @@
 }
 - (void)didSelectIndex:(UIButton *)btn{
     NSLog(@"btn.tag = %ld",btn.tag);
-    if (btn.tag == 0) {
-        CoursewareViewController *couresewareVC = [[CoursewareViewController alloc] initWithNibName:@"CoursewareViewController" bundle:nil];
-        couresewareVC.aid = [self.dataSource[btn.tag][@"id"] integerValue];
-        couresewareVC.navigationItem.title = self.dataSource[btn.tag][@"title"];
-        [self.navigationController pushViewController:couresewareVC animated:YES];
-    }else if (btn.tag == 1) {
-        
-    }else if (btn.tag == 2) {
-        
-    }else if (btn.tag == 3) {
-        
-    }else if (btn.tag == 4) {
-        
-    }else if (btn.tag == 5) {
-        XBHotRecommendController *hotRecommendVC = [[XBHotRecommendController alloc] init];
-        [self.navigationController pushViewController:hotRecommendVC animated:YES];
-    }
-    
+
+    CoursewareViewController *couresewareVC = [[CoursewareViewController alloc] initWithNibName:@"CoursewareViewController" bundle:nil];
+    NSDictionary *info = self.dataSource[btn.tag];
+    couresewareVC.aid = [info[@"id"] integerValue];
+    couresewareVC.navigationItem.title = info[@"title"];
+    [self.navigationController pushViewController:couresewareVC animated:YES];
 }
 
 #pragma mark - 获取我的关注

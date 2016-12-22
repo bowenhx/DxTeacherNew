@@ -71,6 +71,8 @@
             NSArray *items = model.data;
             if ([items isKindOfClass:[NSArray class]] && items.count) {
                 [self addHeadItems:items];
+            }else{
+                [self.view showHUDTitleView:@"暂无内容" image:nil];
             }
             
         }else{

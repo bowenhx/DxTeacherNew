@@ -59,13 +59,7 @@
     }else if (value == 3){
         self.labCheck.text = @"审核不通过";
     }
-    
-    
-    //title
-//    self.labTitle.text = info[@"title"];
-    
-    
-    
+
     //描述
     self.labDescription.text = info[@"zhaiyao"];
     self.descriptionHeight.constant = [ItemVIewsHeight loadTextContentsMaxWidth:95 string:info[@"zhaiyao"]];

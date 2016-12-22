@@ -26,39 +26,45 @@
 
 @implementation XBAddActionRecordController
 
+- (NSString *)valueTagString:(UIButton *)btn{
+    UILabel *tempLab = [self.view viewWithTag:btn.tag - 10];
+    return tempLab.text;
+}
+
 #pragma mark - target事件
 - (IBAction)abilityButtonClick:(UIButton *)sender { // 能力
     _lastButton.selected = NO;
     sender.selected = YES;
     _lastButton = sender;
-    [self requestForDataWith:@"能力"];
+    [self requestForDataWith:[self valueTagString:sender]];
 }
 
 - (IBAction)customButtonClick:(UIButton *)sender { // 特长
     _lastButton.selected = NO;
     sender.selected = YES;
     _lastButton = sender;
-    [self requestForDataWith:@"特长"];}
+    [self requestForDataWith:[self valueTagString:sender]];
+}
 
 - (IBAction)natureButtonClick:(UIButton *)sender { // 思维
     _lastButton.selected = NO;
     sender.selected = YES;
     _lastButton = sender;
-    [self requestForDataWith:@"思维"];
+    [self requestForDataWith:[self valueTagString:sender]];
 }
 
 - (IBAction)healthButtonClick:(UIButton *)sender { //性格
     _lastButton.selected = NO;
     sender.selected = YES;
     _lastButton = sender;
-    [self requestForDataWith:@"性格"];
+    [self requestForDataWith:[self valueTagString:sender]];
 }
 
 - (IBAction)improveButtonClick:(UIButton *)sender { // 习惯
     _lastButton.selected = NO;
     sender.selected = YES;
     _lastButton = sender;
-    [self requestForDataWith:@"习惯"];
+    [self requestForDataWith:[self valueTagString:sender]];
 }
 
 // 右边导航栏点击事件
@@ -106,7 +112,8 @@
     __weak typeof(self) Self = self;
     NSDictionary *userInfo = [SavaData parseDicFromFile:User_File]; // 3
     [MBProgressHUD showHUDAddedTo:Self.view animated:YES];
-    [[XBNetWorkTool shareNetWorkTool] GET:XBURLPREFIXX parameters:@{@"action" : @"doCreateXWJLDayByGradeID",
+    [[XBNetWorkTool shareNetWorkTool] GET:XBURLPREFIXX parameters:@{
+                                                                   @"action":@"doCreateXWJLDayByGradeID",
                                                                    @"uid" : userInfo[@"id"],
                                                                    @"aid" : ID,
                                                                    @"content" : content}

@@ -279,14 +279,25 @@
             [self.navigationController pushViewController:addressVC animated:YES];
         }
             break;
-        case 3:
+        case 1:{//我的审核
+            VerifyViewController *verifyVC = [[VerifyViewController alloc] initWithNibName:@"VerifyViewController" bundle:nil];
+            [self.navigationController pushViewController:verifyVC animated:YES];
+        }
+            break;
+        case 2:
         {//我的考勤
             MyCheckViewController *checkVC = [[MyCheckViewController alloc] initWithNibName:@"MyCheckViewController" bundle:nil];
             [self.navigationController pushViewController:checkVC animated:YES];
         }
             break;
-        case 6:
-        {//我的考勤
+        case 3:
+        {  //园所通知
+            [self classesViewControllerTitle:@"园所通知" index:52];
+        }
+            break;
+          
+        case 4:
+        {//我的收藏
             CollectViewController *collectVC = [[CollectViewController alloc] initWithNibName:@"CollectViewController" bundle:nil];
             [self.navigationController pushViewController:collectVC animated:YES];
         }

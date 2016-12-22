@@ -228,8 +228,8 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CGFloat height = [self itemsImages:self.dataSource[indexPath.row]];
-    return 172 + height;
+    CGFloat height = [ItemVIewsHeight loadTextContentsMaxWidth:95 string:self.dataSource[indexPath.row][@"zhaiyao"]] + [self itemsImages:self.dataSource[indexPath.row]];
+    return 114 + height;
 }
 - (void)didDetailAction:(UIButton *)btn{
     

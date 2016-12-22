@@ -103,7 +103,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.dataSource setArray:@[@"通讯录",@"我的审核",@"我的特色班",@"我的考勤",@"园所通知",@"教学计划",@"我的收藏",@"和睦家庭",@"退出登录"]];
+    //[self.dataSource setArray:@[@"通讯录",@"我的审核",@"我的特色班",@"我的考勤",@"园所通知",@"教学计划",@"我的收藏",@"和睦家庭",@"退出登录"]];
+    
+     [self.dataSource setArray:@[@"通讯录",@"我的审核",@"我的考勤",@"园所通知",@"我的收藏",@"退出登录"]];
     
     [self.tableView setTableHeaderView:[self headView]];
 }

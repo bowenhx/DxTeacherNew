@@ -21,7 +21,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJS-eJ-8X2">
                     <subviews>
-                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKa-tM-MOn">
+                        <button opaque="NO" tag="20" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKa-tM-MOn">
                             <constraints>
                                 <constraint firstAttribute="width" constant="49" id="T6J-tl-yPE"/>
                                 <constraint firstAttribute="height" constant="49" id="ihv-Z5-1Ix"/>
@@ -62,7 +62,7 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqa-aI-hGm">
                     <subviews>
-                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXK-cB-92y">
+                        <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXK-cB-92y">
                             <constraints>
                                 <constraint firstAttribute="height" constant="49" id="CDV-LX-Rtk"/>
                                 <constraint firstAttribute="width" constant="49" id="D3E-3k-dgb"/>
@@ -107,7 +107,7 @@
                                 <constraint firstAttribute="height" constant="1" id="nff-J8-ZDh"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDQ-RT-SEj">
+                        <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDQ-RT-SEj">
                             <constraints>
                                 <constraint firstAttribute="width" constant="49" id="KAx-hb-Qg2"/>
                                 <constraint firstAttribute="height" constant="49" id="Zlm-I9-Qr7"/>
@@ -144,7 +144,7 @@
                                 <constraint firstAttribute="height" constant="1" id="3G2-NV-cw5"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFH-0c-Ebo">
+                        <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFH-0c-Ebo">
                             <constraints>
                                 <constraint firstAttribute="height" constant="49" id="IbV-CB-C6l"/>
                                 <constraint firstAttribute="width" constant="49" id="iJZ-SH-x7G"/>
@@ -181,7 +181,7 @@
                                 <constraint firstAttribute="height" constant="1" id="Kvb-pN-fen"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6L-R9-wKf">
+                        <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6L-R9-wKf">
                             <constraints>
                                 <constraint firstAttribute="height" constant="49" id="Bep-E8-DT0"/>
                                 <constraint firstAttribute="width" constant="49" id="etY-kB-uZA"/>
@@ -244,7 +244,7 @@
                 <constraint firstItem="J9j-no-jKJ" firstAttribute="leading" secondItem="Nqa-aI-hGm" secondAttribute="trailing" id="wkw-BI-csG"/>
                 <constraint firstAttribute="bottom" secondItem="J9j-no-jKJ" secondAttribute="bottom" id="zim-dW-lhh"/>
             </constraints>
-            <point key="canvasLocation" x="33.5" y="54.5"/>
+            <point key="canvasLocation" x="-155" y="-249"/>
         </view>
     </objects>
     <resources>

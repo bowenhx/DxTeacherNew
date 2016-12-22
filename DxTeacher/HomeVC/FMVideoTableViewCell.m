@@ -85,13 +85,15 @@
         });
     }];
     
-    self.moreViewBg.items = info[@"article_zan"];
-    
     self.btnDZ.selected = [info[@"is_dianzan"] boolValue];
+    
     NSArray *itemDZ =  info[@"article_zan"];
     if ([itemDZ isKindOfClass:[NSArray class]]) {
         self.moreViewBg.items = itemDZ;
         self.labNumDZ.text = [NSString stringWithFormat:@"%ld",(long)itemDZ.count];
+        if (itemDZ.count >5) {
+            self.moreHeight.constant = 85;
+        }
     }
 }
 
