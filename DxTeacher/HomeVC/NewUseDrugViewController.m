@@ -50,8 +50,8 @@
         }else{
             [self.view showHUDTitleView:model.message image:nil];
         }
-        
     }];
+
 }
 /**
  *  创建媒体播放控制器

@@ -46,7 +46,9 @@
     }];
     
 }
-
+- (void)loadNewView{
+    _tableView.tableFooterView = [[UIView alloc] init];
+}
 #pragma mark
 #pragma mark UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
