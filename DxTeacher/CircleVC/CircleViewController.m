@@ -49,6 +49,7 @@
     _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(uploadingAction)];
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [_tableView.mj_header beginRefreshing];
+  
 }
 
 

@@ -2009,7 +2009,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: zhihui he (58MK68CUQD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RCNCA68CS6;
 				GCC_PREFIX_HEADER = DxTeacher/PrefixHeader.pch;
@@ -2030,8 +2030,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: QI CHENG JIA YE(BEIJING)EDUCATIONAL CO.,LTD. (RCNCA68CS6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: QI CHENG JIA YE(BEIJING)EDUCATIONAL CO.,LTD. (RCNCA68CS6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RCNCA68CS6;
 				GCC_PREFIX_HEADER = DxTeacher/PrefixHeader.pch;
 				INFOPLIST_FILE = DxTeacher/Info.plist;

@@ -48,6 +48,7 @@
 }
 - (void)loadNewView{
     _tableView.tableFooterView = [[UIView alloc] init];
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 #pragma mark
 #pragma mark UITableViewDelegate
