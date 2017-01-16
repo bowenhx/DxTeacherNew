@@ -10,6 +10,7 @@
 #import "XBNetWorkTool.h"
 #import <MJRefresh.h>
 #import "XBTeacherCell.h"
+#import "FindDetailViewController.h"
 
 @interface TeachingViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -172,7 +173,14 @@
     
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    FindDetailViewController *detailVC = [[FindDetailViewController alloc] initWithNibName:@"FindDetailViewController" bundle:nil];
+    XBElephantModel *model = _dataList[indexPath.row];
+    detailVC.cid = [model.ID integerValue];
+    [self.navigationController pushViewController:detailVC animated:YES];
+}
 #pragma mark - 设置UI
 - (void)setUpTableView {
     self.tableView.tableFooterView = [[UIView alloc] init];
