@@ -126,7 +126,7 @@
                         @[@"czrz-_1_unpressed",@"czrz_1_pressed",@"成长日志"],
                         @[@"yytgl_1_unpressed",@"yytgl_1_pressed",@"用药条管理"],
                         @[@"ystz_1_unpressed",@"ystz_1_pressed",@"园所通知"],
-                        //@[@"wdsh_1_unpressed",@"wdsh_1_pressed",@"我的审核"],
+                        @[@"wdsh_1_unpressed",@"wdsh_1_pressed",@"我的审核"],
                         @[@"aqtx_1_unpressed",@"aqtx_1_pressed",@"安全提醒"]
                         ];
     
@@ -233,13 +233,13 @@
             [self classesViewControllerTitle:@"园所通知" index:52];
         }
             break;
-//        case 8:
-//        {//我的审核
-//            VerifyViewController *verifyVC = [[VerifyViewController alloc] initWithNibName:@"VerifyViewController" bundle:nil];
-//            [self.navigationController pushViewController:verifyVC animated:YES];
-//        }
-//            break;
         case 8:
+        {//我的审核
+            VerifyViewController *verifyVC = [[VerifyViewController alloc] initWithNibName:@"VerifyViewController" bundle:nil];
+            [self.navigationController pushViewController:verifyVC animated:YES];
+        }
+            break;
+        case 9:
         {//安全提醒
             XBSaveAttentionController *saveVC = [[XBSaveAttentionController alloc] init];
             [self.navigationController pushViewController:saveVC animated:YES];
