@@ -157,7 +157,7 @@
         //只需要画两条就行
         if (i < 2) {
             //画竖线
-            UILabel *lineY = [[UILabel alloc] initWithFrame:CGRectMake(iView.max_X, addBtnY, 1, iView.h*3)];
+            UILabel *lineY = [[UILabel alloc] initWithFrame:CGRectMake(iView.max_X, addBtnY, 1, iView.h*4)];
             lineY.backgroundColor = @"#cccccc".color;
             [self.scrollView addSubview:lineY];
         }
@@ -167,7 +167,7 @@
         
     }
 
-    _scrollView.contentSize = CGSizeMake(self.screen_W, self.screen_H);
+    _scrollView.contentSize = CGSizeMake(self.screen_W, self.screen_H+20);
 }
 
 - (void)loadNewData{
