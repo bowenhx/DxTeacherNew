@@ -191,6 +191,12 @@
 #pragma mark - 设置UI
 - (void)setUpNavItem {
     self.title = [NSString stringWithFormat:@"%@的行为报告", _name];
+    for (UIButton *buttn in self.view.subviews) {
+        if ([buttn isKindOfClass:[UIButton class]]) {
+            buttn.layer.masksToBounds = YES;
+            buttn.layer.cornerRadius = 8;
+        }
+    }
 }
 
 - (void)setUpTableView {

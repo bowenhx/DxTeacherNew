@@ -14,6 +14,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.icon.layer.masksToBounds = YES;
+    self.icon.layer.cornerRadius = 30;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -221,6 +221,11 @@
     if (_addressBtn1.selected) {
         return 90;
     }
+   NSString *title = self.addressArray[indexPath.section][@"grade"];
+    if ([title isEqualToString:@"园所通讯"]) {
+        return 40;
+    }
+    
     return 80;
 }
 - (void)didReceiveMemoryWarning {

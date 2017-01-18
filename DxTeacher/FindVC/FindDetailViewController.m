@@ -66,7 +66,6 @@
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.info = self.dataSource[indexPath.row];
-    cell.imagesView.viewController = self;
     return cell;
     
     

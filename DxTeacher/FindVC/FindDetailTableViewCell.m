@@ -14,8 +14,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.headImg.layer.masksToBounds = YES;
-    self.headImg.layer.cornerRadius = 35;
+//    self.headImg.layer.masksToBounds = YES;
+//    self.headImg.layer.cornerRadius = 35;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -25,10 +25,10 @@
 }
 - (void)setInfo:(NSDictionary *)info{
     //头像
-    [self.headImg img_setImageWithURL:info[@"img_url"] placeholderImage:nil];
+//    [self.headImg img_setImageWithURL:info[@"img_url"] placeholderImage:nil];
     
     //用户
-    self.labName.text = info[@"fields"][@"author"];
+    self.labName.text = info[@"title"];
     
     //时间
     self.labTime.text = [NSString getDateStringWithString:info[@"add_time"]];
@@ -40,7 +40,7 @@
     
     
     //title
-    self.labTitle.text = info[@"title"];
+//    self.labTitle.text = info[@"title"];
     
     //描述
     self.labDescription.text = info[@"zhaiyao"];
@@ -48,11 +48,11 @@
     self.descriptionHeight.constant = [ItemVIewsHeight loadTextContentsMaxWidth:16 string:info[@"zhaiyao"]];
     
     
-    NSArray *items = info[@"albums"];
-    self.imagesView.imgItems = items;
-    
-    //计算图片height
-    self.imagesHeight.constant = [ItemVIewsHeight loadItmesCounts:items.count];
+//    NSArray *items = info[@"albums"];
+//    self.imagesView.imgItems = items;
+//    
+//    //计算图片height
+//    self.imagesHeight.constant = [ItemVIewsHeight loadItmesCounts:items.count];
     
    
     

@@ -90,10 +90,10 @@
     NSArray *itemDZ =  info[@"article_zan"];
     if ([itemDZ isKindOfClass:[NSArray class]]) {
         self.moreViewBg.items = itemDZ;
+        NSInteger count = ceilf(itemDZ.count / 5.0);
         self.labNumDZ.text = [NSString stringWithFormat:@"%ld",(long)itemDZ.count];
-        if (itemDZ.count >5) {
-            self.moreHeight.constant = 85;
-        }
+        self.moreHeight.constant = count * 35 +10;
+        
     }
 }
 

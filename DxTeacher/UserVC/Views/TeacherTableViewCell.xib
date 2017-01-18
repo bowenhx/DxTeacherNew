@@ -17,6 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CE6-kv-3iZ">
+                        <color key="backgroundColor" red="0.85786765809999999" green="0.45014876129999998" blue="0.70547086000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="3kn-ND-dwE"/>
                             <constraint firstAttribute="height" constant="60" id="ctJ-f9-R3s"/>
