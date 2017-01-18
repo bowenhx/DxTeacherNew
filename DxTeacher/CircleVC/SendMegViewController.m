@@ -69,8 +69,21 @@
     return _assets;
 }
 - (void)tapRightBtn{
+    if ([_textView isFirstResponder]) {
+        [_textView resignFirstResponder];
+    }
+    
     if ([@"" isStringBlank:_textView.text]) {
         [self.view showHUDTitleView:@"请输入内容再发布" image:nil];
+        return;
+    }
+    if (_textView.text.length < 10) {
+        [self.view showHUDTitleView:@"发布文字岂能少于10个字符？" image:nil];
+        return;
+    }
+    if (self.assets.count == 0) {
+        [self.view showHUDTitleView:@"发布内容岂能少了图片？" image:nil];
+        return;
     }
     
     

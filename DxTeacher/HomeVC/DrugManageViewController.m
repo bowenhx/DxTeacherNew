@@ -68,6 +68,8 @@
     
     cell.info = self.dataSource[indexPath.section];
     cell.btnUseDrug.tag = indexPath.section;
+    cell.btnUse.tag = indexPath.section;
+    [cell.btnUse addTarget:self action:@selector(didSelectUserLog:) forControlEvents:UIControlEventTouchUpInside];
     [cell.btnUseDrug addTarget:self action:@selector(selectUseAction:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
@@ -77,11 +79,14 @@
     newUseDrugVC.title = @"用药条";
     [self.navigationController pushViewController:newUseDrugVC animated:YES];
 }
-
+- (void)didSelectUserLog:(UIButton *)btn{
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation

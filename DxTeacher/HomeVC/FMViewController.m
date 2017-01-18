@@ -100,11 +100,8 @@
     NSString *fmType = self.dataSource[indexPath.row][@"fields"][@"fm_type"];
     if ([fmType isEqualToString:@"视频"]) {
         NSArray *itemDZ =  self.dataSource[indexPath.row][@"article_zan"];
-        float itemH = 0;
-        if (itemDZ.count >5) {
-            itemH += 35;
-        }
-        return 245 + itemH;
+        NSInteger count = ceilf(itemDZ.count / 5.0);
+        return 245 + 35*count;
     }else
         return 170;
 }

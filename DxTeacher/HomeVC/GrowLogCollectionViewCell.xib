@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,6 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvG-Yn-m59">
+                        <rect key="frame" x="84" y="84" width="16" height="16"/>
                         <color key="backgroundColor" red="0.85786765809999999" green="0.45014876129999998" blue="0.70547086000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="16" id="L1u-6B-Pem"/>
@@ -27,6 +31,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbh-nE-euK">
+                        <rect key="frame" x="0.0" y="69" width="100" height="15"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="NWT-KJ-PTI"/>
                         </constraints>
@@ -35,12 +40,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swt-OH-pcN">
+                        <rect key="frame" x="24" y="10" width="50" height="50"/>
                         <color key="backgroundColor" red="0.85786765809999999" green="0.45014876129999998" blue="0.70547086000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="swt-OH-pcN" secondAttribute="height" multiplier="1:1" id="gDP-rl-I99"/>
                         </constraints>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="私聊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKK-Hf-rvl">
+                        <rect key="frame" x="58" y="85" width="25" height="14"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="Nfm-Ns-izl"/>
                         </constraints>
@@ -49,6 +56,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日志" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDU-vw-rTZ">
+                        <rect key="frame" x="2" y="85" width="25" height="15"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="WEC-S9-3Xm"/>
                         </constraints>
@@ -57,6 +65,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaN-Ja-nBf">
+                        <rect key="frame" x="27" y="84" width="16" height="16"/>
                         <color key="backgroundColor" red="0.85786765809999999" green="0.45014876129999998" blue="0.70547086000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="16" id="pQj-zr-cPr"/>
@@ -73,14 +82,14 @@
                 <constraint firstAttribute="bottom" secondItem="WaN-Ja-nBf" secondAttribute="bottom" id="8bP-9z-EIC"/>
                 <constraint firstAttribute="trailing" secondItem="GKK-Hf-rvl" secondAttribute="trailing" constant="17" id="9fe-Kq-Sew"/>
                 <constraint firstItem="WaN-Ja-nBf" firstAttribute="leading" secondItem="LDU-vw-rTZ" secondAttribute="trailing" id="AcG-zn-4x3"/>
-                <constraint firstItem="qbh-nE-euK" firstAttribute="top" secondItem="swt-OH-pcN" secondAttribute="bottom" constant="8" id="AxF-lm-BtK"/>
+                <constraint firstItem="qbh-nE-euK" firstAttribute="top" secondItem="swt-OH-pcN" secondAttribute="bottom" constant="9" id="AxF-lm-BtK"/>
                 <constraint firstAttribute="trailing" secondItem="EvG-Yn-m59" secondAttribute="trailing" id="Fad-gG-sZj"/>
                 <constraint firstItem="swt-OH-pcN" firstAttribute="top" secondItem="ZNA-Bq-Ijq" secondAttribute="top" constant="10" id="Tcg-bs-uLg"/>
                 <constraint firstItem="LDU-vw-rTZ" firstAttribute="leading" secondItem="ZNA-Bq-Ijq" secondAttribute="leading" constant="2" id="XUI-7L-eyn"/>
                 <constraint firstAttribute="trailing" secondItem="qbh-nE-euK" secondAttribute="trailing" id="ea5-y4-AzL"/>
                 <constraint firstItem="qbh-nE-euK" firstAttribute="leading" secondItem="ZNA-Bq-Ijq" secondAttribute="leading" id="mfm-y2-l7k"/>
                 <constraint firstItem="EvG-Yn-m59" firstAttribute="top" secondItem="qbh-nE-euK" secondAttribute="bottom" id="q5z-Tz-LdC"/>
-                <constraint firstItem="swt-OH-pcN" firstAttribute="centerX" secondItem="ZNA-Bq-Ijq" secondAttribute="centerX" id="uaO-y4-2hv"/>
+                <constraint firstItem="swt-OH-pcN" firstAttribute="centerX" secondItem="ZNA-Bq-Ijq" secondAttribute="centerX" constant="-1" id="uaO-y4-2hv"/>
                 <constraint firstAttribute="bottom" secondItem="LDU-vw-rTZ" secondAttribute="bottom" id="weN-vm-qOO"/>
                 <constraint firstAttribute="bottom" secondItem="GKK-Hf-rvl" secondAttribute="bottom" constant="1" id="y3c-Zn-RhW"/>
             </constraints>
@@ -91,7 +100,7 @@
                 <outlet property="labSL" destination="EvG-Yn-m59" id="WwL-aB-gqQ"/>
                 <outlet property="labTitle" destination="qbh-nE-euK" id="T24-mN-ELC"/>
             </connections>
-            <point key="canvasLocation" x="-61" y="170"/>
+            <point key="canvasLocation" x="-193" y="65"/>
         </collectionViewCell>
     </objects>
 </document>

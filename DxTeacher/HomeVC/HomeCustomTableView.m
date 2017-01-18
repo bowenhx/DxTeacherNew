@@ -192,8 +192,9 @@
     cell.info = self.dataSource[indexPath.row];
     cell.btnCheck.tag = indexPath.row;
     if ([self.homeVC.title isEqualToString:@"我的审核"]) {
-        [cell.btnCheck setTitle:@"待确认" forState:0];
-        [cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
+        cell.btnCheck.hidden = YES;
+//        [cell.btnCheck setTitle:@"待确认" forState:0];
+//        [cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
     }else{
         cell.btnCheck.hidden = YES;
     }
@@ -227,6 +228,9 @@
         NSArray *comment = self.dataSource[indexPath.row][@"comment"];
         float comH = comment.count * 25;
         return 115 + height + comH;
+    }
+    if ([self.homeVC.title isEqualToString:@"我的审核"]) {
+        return 95+height;
     }
     return 115 + height;
 }

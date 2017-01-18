@@ -18,9 +18,10 @@
     self.contentView.layer.borderColor = XBColor(235, 235, 235, 1.0).CGColor;
     self.contentView.layer.borderWidth = 1.0;
     
-    CGFloat width = (kScreenWidth - 80) / 3 - 50;
-    _iconBtn.layer.cornerRadius = width * 0.5;
+//    CGFloat width = ((kScreenWidth - 80) / 3 - 50)/2;
     _iconBtn.layer.masksToBounds = YES;
+    _iconBtn.layer.cornerRadius = 26;
+    
     
     _labRZ.layer.cornerRadius = 8;
     _labRZ.layer.masksToBounds = YES;

@@ -19,6 +19,7 @@
          UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(addBtnX, addBtnY, PRAISE_W, PRAISE_W)];
         [imageView img_setImageWithURL:items[i][@"img_url"] placeholderImage:nil];
 //        imageView.layer.borderWidth = 1;
+        imageView.backgroundColor = [UIColor colorAppBg];
         imageView.layer.masksToBounds = YES;
         imageView.layer.cornerRadius = 15;
         [self addSubview:imageView];

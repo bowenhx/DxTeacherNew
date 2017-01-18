@@ -72,7 +72,10 @@
 
 - (void)loadNewData{
     NSDictionary *info = [SavaData parseDicFromFile:User_File];
-    [self.view showHUDActivityView:@"正在加载" shade:NO];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self.view showHUDActivityView:@"正在加载" shade:NO];
+    });
+  
     [[ANet share] post:BASE_URL params:@{@"action":@"getChildList",@"uid":info[@"id"]} completion:^(BNetData *model, NSString *netErr) {
         [self.view removeHUDActivity];
         
