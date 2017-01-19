@@ -10,6 +10,7 @@
 #import "TrendsTableViewCell.h"
 #import "AppDefine.h"
 #import "ItemVIewsHeight.h"
+#import "DetailViewController.h"
 
 @interface HomeCustomTableView ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -193,10 +194,9 @@
     cell.btnCheck.tag = indexPath.row;
     if ([self.homeVC.title isEqualToString:@"我的审核"]) {
         cell.btnCheck.hidden = YES;
-//        [cell.btnCheck setTitle:@"待确认" forState:0];
-//        [cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
     }else{
-        cell.btnCheck.hidden = YES;
+        cell.btnCheck.hidden = NO;
+        [cell.btnCheck addTarget:self action:@selector(didDetailAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     cell.imagesView.viewController = self.homeVC;
    
@@ -209,7 +209,9 @@
     if ([self.homeVC.title isEqualToString:@"我的审核"]) {
         [self reviewedActonDictionary:self.dataSource[btn.tag]];
     }else{
-        
+        DetailViewController *detail = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+        detail.cid = [self.dataSource[btn.tag][@"id"] integerValue];
+        [self.homeVC.navigationController pushViewController:detail animated:YES];
     }
 }
 
