@@ -28,8 +28,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//     self.navigationItem.title = @"班级圈";
-    
     _aidIndex = 52;
 }
 

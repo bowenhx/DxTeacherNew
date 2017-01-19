@@ -48,7 +48,7 @@
     self.labTime.text = [NSString getDateStringWithString:info[@"add_time"]];
    
     //班级
-    self.labClass.text = info[@"fields"][@"source"];
+    self.labClass.text = info[@"fields"][@"grade_name"];
     
     //0已审核 1未审核 2审核不通过
     NSInteger value = [info[@"status"] integerValue];
