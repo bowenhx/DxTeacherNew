@@ -136,19 +136,19 @@
     for (XBActionRecordModel *actionModel in baseModel.Actiontypes) {
         if ([actionModel.Name isEqualToString:@"性格"]) {
             UILabel *label = _labelArray[3];
-            label.text = [NSString stringWithFormat:@"性格%@项", actionModel.Itemcount];
+            label.text = [NSString stringWithFormat:@"性格%ld项",(long) actionModel.Items.count];
         }else if ([actionModel.Name isEqualToString:@"能力"]) {
             UILabel *label = _labelArray[0];
-            label.text = [NSString stringWithFormat:@"能力%@项", actionModel.Itemcount];
+            label.text = [NSString stringWithFormat:@"能力%ld项",(long)actionModel.Items.count];
         }else if ([actionModel.Name isEqualToString:@"习惯"]) {
             UILabel *label = _labelArray[4];
-            label.text = [NSString stringWithFormat:@"习惯%@项", actionModel.Itemcount];
+            label.text = [NSString stringWithFormat:@"习惯%ld项",(long) actionModel.Items.count];
         }else if ([actionModel.Name isEqualToString:@"思维"]) {
             UILabel *label = _labelArray[2];
-            label.text = [NSString stringWithFormat:@"思维%@项", actionModel.Itemcount];
+            label.text = [NSString stringWithFormat:@"思维%ld项",(long) actionModel.Items.count];
         }else if ([actionModel.Name isEqualToString:@"特长"]) {
             UILabel *label = _labelArray[1];
-            label.text = [NSString stringWithFormat:@"特长%@项", actionModel.Itemcount];
+            label.text = [NSString stringWithFormat:@"特长%ld项",(long) actionModel.Items.count];
         }
     }
 }
@@ -176,13 +176,13 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *backView = [[UIView alloc] init];
     backView.frame = CGRectMake(0, 0, kScreenWidth, 20.0);
-    backView.backgroundColor = [UIColor whiteColor];
+    backView.backgroundColor = [UIColor colorCellHeadBg];
     UILabel *titleLabel = [[UILabel alloc] init];
-    titleLabel.frame = CGRectMake(18, 0, kScreenWidth, 20.0);
+    titleLabel.frame = CGRectMake(10, 0, kScreenWidth, 20.0);
     // 61 203 154
     titleLabel.textColor = [UIColor colorWithRed:61 / 255.0 green:203 / 255.0 blue:154 / 255.0 alpha:1.0];
     [backView addSubview:titleLabel];
-    titleLabel.font = [UIFont systemFontOfSize:13];
+    titleLabel.font = [UIFont systemFontOfSize:17];
     XBActionRecordModel *actionRecordModel = _baseModel.Actiontypes[section];
     titleLabel.text = actionRecordModel.Name;
     return backView;
@@ -191,12 +191,13 @@
 #pragma mark - 设置UI
 - (void)setUpNavItem {
     self.title = [NSString stringWithFormat:@"%@的行为报告", _name];
-    for (UIButton *buttn in self.view.subviews) {
-        if ([buttn isKindOfClass:[UIButton class]]) {
-            buttn.layer.masksToBounds = YES;
-            buttn.layer.cornerRadius = 8;
-        }
+
+    for (int i=0; i<5; i++) {
+        UIButton *btn = [self.view viewWithTag:20+i];
+        btn.layer.masksToBounds = YES;
+        btn.layer.cornerRadius = 3;
     }
+    
 }
 
 - (void)setUpTableView {

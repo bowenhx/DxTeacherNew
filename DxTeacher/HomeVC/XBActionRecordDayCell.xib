@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,20 +15,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jec-2R-3Ej" id="Gyw-wm-gHX">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQJ-ZC-Lnd">
-                        <rect key="frame" x="18" y="8" width="33" height="17"/>
+                        <rect key="frame" x="18" y="8" width="37.5" height="17"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="17" id="Pdm-0H-C48"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="1" green="0.59850704669952393" blue="0.0040854103863239288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="30" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ykm-da-D3X">
-                        <rect key="frame" x="0.0" y="33" width="375" height="59"/>
+                        <rect key="frame" x="18" y="33" width="357" height="59"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="59" id="ULt-ba-ZNP"/>
@@ -37,7 +37,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Ykm-da-D3X" secondAttribute="bottom" constant="8" id="C9m-fF-nyi"/>
-                    <constraint firstItem="Ykm-da-D3X" firstAttribute="leading" secondItem="Gyw-wm-gHX" secondAttribute="leading" id="ORA-Ka-Q9s"/>
+                    <constraint firstItem="Ykm-da-D3X" firstAttribute="leading" secondItem="Gyw-wm-gHX" secondAttribute="leading" constant="18" id="ORA-Ka-Q9s"/>
                     <constraint firstItem="cQJ-ZC-Lnd" firstAttribute="leading" secondItem="Gyw-wm-gHX" secondAttribute="leading" constant="18" id="UHa-Yj-qV4"/>
                     <constraint firstAttribute="trailing" secondItem="Ykm-da-D3X" secondAttribute="trailing" id="YDH-72-9n5"/>
                     <constraint firstItem="cQJ-ZC-Lnd" firstAttribute="top" secondItem="Gyw-wm-gHX" secondAttribute="top" constant="8" id="gX9-Uz-gz7"/>
